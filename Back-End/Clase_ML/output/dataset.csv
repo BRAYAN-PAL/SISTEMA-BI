@@ -1,0 +1,1002 @@
+id_tramite,distrito,tipo_tramite,fecha,personas_cola,tiempo_espera_min,ventanillas,estado,promedio_atencion,personas_por_ventanilla,nivel_congestion
+1,Comas,Certificado,2026-04-18,41,23,2,Pendiente,1.17,20.5,Media
+2,Los Olivos,Certificado,2026-05-08,64,71,1,Pendiente,1.11,64,Alta
+3,Miraflores,Pasaporte,2026-05-09,13,20,5,Completado,1.2,2.6,Baja
+4,Los Olivos,Licencia de Conducir,2026-04-15,67,16,5,Pendiente,1.24,13.4,Baja
+5,Puente Piedra,Permiso de Funcionamiento,2026-04-28,53,20,3,En proceso,1.18,17.67,Baja
+6,Comas,Certificado,2026-04-25,22,11,3,Completado,1.52,7.33,Baja
+7,Santiago de Surco,Certificado,2026-04-30,78,124,1,En proceso,1.59,78,Alta
+8,Comas,Pasaporte,2026-04-19,116,35,5,En proceso,1.54,23.2,Media
+9,Chorrillos,Matrícula,2026-05-16,18,25,1,En proceso,1.43,18,Baja
+10,Comas,Matrícula,2026-04-07,58,25,3,En proceso,1.33,19.33,Baja
+11,Puente Piedra,DNI / Identidad,2026-04-23,36,17,3,Completado,1.45,12,Baja
+12,Comas,Pasaporte,2026-05-11,31,12,5,En proceso,1.46,6.2,Baja
+13,Ate,DNI / Identidad,2026-05-11,98,23,5,En proceso,1.21,19.6,Baja
+14,Lima,Matrícula,2026-04-03,113,48,3,Pendiente,1.3,37.67,Media
+15,Miraflores,Pasaporte,2026-05-16,50,35,2,En proceso,1.43,25,Media
+16,Carabayllo,Matrícula,2026-04-17,27,19,2,Completado,1.47,13.5,Baja
+17,Santiago de Surco,Permiso de Funcionamiento,2026-05-08,64,16,5,Pendiente,1.3,12.8,Baja
+18,Puente Piedra,Pasaporte,2026-05-02,21,32,1,Pendiente,1.53,21,Media
+19,Puente Piedra,Permiso de Funcionamiento,2026-04-28,86,110,1,Completado,1.29,86,Alta
+20,Carabayllo,Pasaporte,2026-04-17,80,115,1,Pendiente,1.44,80,Alta
+21,Comas,Certificado,2026-05-17,105,87,4,Completado,0.83,26.25,Media
+22,Comas,Pasaporte,2026-04-13,140,129,1,En proceso,0.92,140,Alta
+23,Santiago de Surco,Licencia de Conducir,2026-04-12,110,97,1,En proceso,0.88,110,Alta
+24,Santiago de Surco,Matrícula,2026-05-12,108,129,5,Pendiente,1.19,21.6,Media
+25,Ate,Licencia de Conducir,2026-05-20,59,86,2,En proceso,1.45,29.5,Media
+26,Miraflores,Permiso de Funcionamiento,2026-05-19,101,154,4,Pendiente,1.52,25.25,Media
+27,Ate,Licencia de Conducir,2026-04-02,68,61,1,Completado,0.9,68,Alta
+28,Ate,DNI / Identidad,2026-04-27,120,169,5,Completado,1.41,24,Media
+29,Santiago de Surco,Certificado,2026-04-01,43,59,1,En proceso,1.37,43,Alta
+30,Comas,DNI / Identidad,2026-04-09,32,44,3,Completado,1.36,10.67,Baja
+31,Chorrillos,Permiso de Funcionamiento,2026-05-12,55,54,1,Completado,0.98,55,Alta
+32,Carabayllo,DNI / Identidad,2026-05-16,58,74,2,Pendiente,1.27,29,Media
+33,Carabayllo,Permiso de Funcionamiento,2026-04-26,29,45,5,Pendiente,1.56,5.8,Baja
+34,Lima,DNI / Identidad,2026-04-18,72,114,1,Completado,1.59,72,Alta
+35,Carabayllo,DNI / Identidad,2026-04-18,106,118,3,Completado,1.11,35.33,Alta
+36,Puente Piedra,Licencia de Conducir,2026-04-21,30,34,6,Pendiente,1.12,5,Baja
+37,Santiago de Surco,Certificado,2026-04-29,32,50,6,Completado,1.55,5.33,Baja
+38,Miraflores,DNI / Identidad,2026-04-01,113,153,5,Completado,1.35,22.6,Media
+39,Los Olivos,Matrícula,2026-05-11,89,125,6,Pendiente,1.4,14.83,Baja
+40,Puente Piedra,DNI / Identidad,2026-05-18,72,60,1,Pendiente,0.84,72,Alta
+41,Ate,Permiso de Funcionamiento,2026-04-11,15,14,3,Pendiente,0.93,5,Baja
+42,Puente Piedra,Certificado,2026-04-14,140,165,2,En proceso,1.18,70,Alta
+43,Comas,Licencia de Conducir,2026-04-17,135,124,4,Completado,0.92,33.75,Media
+44,Los Olivos,Matrícula,2026-05-01,19,28,2,Pendiente,1.45,9.5,Baja
+45,Comas,Pasaporte,2026-05-14,98,117,1,Completado,1.19,98,Alta
+46,Comas,Permiso de Funcionamiento,2026-05-17,112,93,3,Pendiente,0.83,37.33,Alta
+47,Los Olivos,Certificado,2026-05-18,68,83,3,En proceso,1.22,22.67,Media
+48,Carabayllo,Matrícula,2026-04-21,81,70,1,En proceso,0.87,81,Alta
+49,Ate,DNI / Identidad,2026-04-20,83,103,3,Pendiente,1.24,27.67,Media
+50,Los Olivos,Licencia de Conducir,2026-05-05,19,29,1,En proceso,1.54,19,Media
+51,Santiago de Surco,Certificado,2026-04-21,99,99,6,Pendiente,1,16.5,Media
+52,Carabayllo,Matrícula,2026-05-16,30,45,6,Pendiente,1.49,5,Baja
+53,Lima,Licencia de Conducir,2026-04-07,118,126,3,En proceso,1.07,39.33,Alta
+54,Carabayllo,Licencia de Conducir,2026-04-21,80,95,5,Pendiente,1.19,16,Media
+55,Santiago de Surco,Pasaporte,2026-05-14,31,33,3,Pendiente,1.08,10.33,Baja
+56,Lima,Permiso de Funcionamiento,2026-04-04,114,158,6,En proceso,1.39,19,Media
+57,Ate,DNI / Identidad,2026-05-01,94,130,2,Completado,1.38,47,Alta
+58,Santiago de Surco,Licencia de Conducir,2026-04-21,140,115,6,Pendiente,0.82,23.33,Media
+59,Lima,Certificado,2026-05-04,13,14,2,En proceso,1.09,6.5,Baja
+60,Comas,Licencia de Conducir,2026-04-02,38,38,1,Pendiente,1,38,Alta
+61,Ate,DNI / Identidad,2026-04-30,104,90,6,Completado,0.87,17.33,Media
+62,Ate,Matrícula,2026-04-08,93,146,3,En proceso,1.57,31,Media
+63,Ate,Licencia de Conducir,2026-04-28,25,39,6,Completado,1.57,4.17,Baja
+64,Comas,Pasaporte,2026-04-10,53,48,4,Pendiente,0.91,13.25,Baja
+65,Miraflores,Matrícula,2026-04-27,118,130,2,Pendiente,1.1,59,Alta
+66,Carabayllo,Licencia de Conducir,2026-04-01,61,79,4,En proceso,1.3,15.25,Media
+67,Comas,Pasaporte,2026-05-05,59,65,5,En proceso,1.1,11.8,Baja
+68,Santiago de Surco,DNI / Identidad,2026-05-06,74,113,4,Pendiente,1.53,18.5,Media
+69,Santiago de Surco,Licencia de Conducir,2026-04-16,128,122,5,En proceso,0.95,25.6,Media
+70,Chorrillos,Matrícula,2026-04-30,140,129,6,Pendiente,0.92,23.33,Media
+71,Puente Piedra,Certificado,2026-04-12,76,89,4,Completado,1.17,19,Media
+72,Puente Piedra,Permiso de Funcionamiento,2026-04-05,52,43,2,En proceso,0.82,26,Media
+73,Carabayllo,Licencia de Conducir,2026-05-13,110,102,6,Completado,0.93,18.33,Media
+74,Los Olivos,Licencia de Conducir,2026-05-19,20,17,2,Pendiente,0.86,10,Baja
+75,Chorrillos,DNI / Identidad,2026-04-22,135,134,1,Pendiente,0.99,135,Alta
+76,Chorrillos,Matrícula,2026-04-08,121,155,5,Completado,1.28,24.2,Media
+77,Puente Piedra,Matrícula,2026-04-07,11,10,4,En proceso,0.92,2.75,Baja
+78,Los Olivos,DNI / Identidad,2026-04-24,40,50,6,Completado,1.24,6.67,Baja
+79,Los Olivos,Certificado,2026-05-18,130,107,1,En proceso,0.82,130,Alta
+80,Comas,Permiso de Funcionamiento,2026-04-28,100,115,1,Completado,1.15,100,Alta
+81,Carabayllo,Licencia de Conducir,2026-04-13,62,62,4,En proceso,1,15.5,Media
+82,Miraflores,Pasaporte,2026-05-13,138,137,4,En proceso,0.99,34.5,Media
+83,Chorrillos,Pasaporte,2026-04-08,64,92,1,Pendiente,1.44,64,Alta
+84,Chorrillos,DNI / Identidad,2026-05-05,149,237,1,Completado,1.59,149,Alta
+85,Los Olivos,Pasaporte,2026-04-09,85,96,6,En proceso,1.13,14.17,Baja
+86,Miraflores,Matrícula,2026-04-05,145,220,2,Completado,1.52,72.5,Alta
+87,Chorrillos,DNI / Identidad,2026-04-18,103,124,3,Completado,1.2,34.33,Media
+88,Los Olivos,DNI / Identidad,2026-05-12,134,115,1,Completado,0.86,134,Alta
+89,Carabayllo,Certificado,2026-04-20,84,73,6,Completado,0.87,14,Baja
+90,Chorrillos,Licencia de Conducir,2026-04-19,150,186,6,Completado,1.24,25,Media
+91,Lima,Certificado,2026-05-12,38,56,6,Pendiente,1.48,6.33,Baja
+92,Puente Piedra,Pasaporte,2026-05-09,98,140,1,Pendiente,1.43,98,Alta
+93,Miraflores,Pasaporte,2026-05-18,110,174,3,En proceso,1.58,36.67,Alta
+94,Ate,Matrícula,2026-04-15,66,84,1,En proceso,1.28,66,Alta
+95,Los Olivos,DNI / Identidad,2026-05-08,92,76,6,En proceso,0.83,15.33,Media
+96,Miraflores,Certificado,2026-05-02,101,93,2,En proceso,0.92,50.5,Alta
+97,Chorrillos,Pasaporte,2026-05-07,115,98,2,En proceso,0.85,57.5,Alta
+98,Chorrillos,Licencia de Conducir,2026-04-09,64,70,4,Pendiente,1.1,16,Media
+99,Santiago de Surco,Licencia de Conducir,2026-04-20,21,30,3,Completado,1.44,7,Baja
+100,Chorrillos,Matrícula,2026-05-17,30,42,1,Completado,1.4,30,Media
+101,Santiago de Surco,Licencia de Conducir,2026-05-09,94,116,4,Completado,1.23,23.5,Media
+102,Miraflores,Licencia de Conducir,2026-04-01,28,36,2,En proceso,1.29,14,Baja
+103,Lima,Certificado,2026-04-22,18,22,3,Completado,1.24,6,Baja
+104,Los Olivos,Pasaporte,2026-05-13,32,46,2,Completado,1.43,16,Media
+105,Lima,DNI / Identidad,2026-04-09,59,67,3,En proceso,1.13,19.67,Media
+106,Ate,DNI / Identidad,2026-04-03,71,77,3,Pendiente,1.08,23.67,Media
+107,Comas,DNI / Identidad,2026-05-12,113,170,4,Completado,1.5,28.25,Media
+108,Puente Piedra,Permiso de Funcionamiento,2026-04-02,31,25,5,En proceso,0.8,6.2,Baja
+109,Carabayllo,Permiso de Funcionamiento,2026-05-17,117,185,3,Pendiente,1.58,39,Alta
+110,Los Olivos,Licencia de Conducir,2026-05-01,117,122,5,Pendiente,1.04,23.4,Media
+111,Puente Piedra,Matrícula,2026-05-14,132,170,2,Pendiente,1.29,66,Alta
+112,Chorrillos,Licencia de Conducir,2026-05-08,26,23,3,Completado,0.87,8.67,Baja
+113,Miraflores,Licencia de Conducir,2026-04-28,134,127,4,En proceso,0.95,33.5,Media
+114,Los Olivos,Matrícula,2026-05-09,41,39,1,Completado,0.94,41,Alta
+115,Santiago de Surco,Matrícula,2026-05-07,45,37,2,Pendiente,0.82,22.5,Media
+116,Chorrillos,Certificado,2026-04-17,62,86,6,En proceso,1.39,10.33,Baja
+117,Carabayllo,Pasaporte,2026-05-01,43,55,1,Completado,1.29,43,Alta
+118,Comas,DNI / Identidad,2026-05-17,75,103,6,En proceso,1.37,12.5,Baja
+119,Los Olivos,Pasaporte,2026-05-07,150,192,4,Completado,1.28,37.5,Alta
+120,Los Olivos,Certificado,2026-05-07,35,50,3,Pendiente,1.44,11.67,Baja
+121,Miraflores,Licencia de Conducir,2026-04-15,98,129,4,En proceso,1.32,24.5,Media
+122,Carabayllo,Matrícula,2026-05-04,96,109,4,Pendiente,1.14,24,Media
+123,Carabayllo,Certificado,2026-04-30,145,194,6,Completado,1.34,24.17,Media
+124,Chorrillos,DNI / Identidad,2026-05-13,48,40,2,En proceso,0.84,24,Media
+125,Santiago de Surco,Licencia de Conducir,2026-05-05,130,170,4,En proceso,1.31,32.5,Media
+126,Comas,Licencia de Conducir,2026-05-15,33,33,3,En proceso,0.99,11,Baja
+127,Santiago de Surco,Licencia de Conducir,2026-04-27,58,78,1,Completado,1.34,58,Alta
+128,Ate,Licencia de Conducir,2026-05-03,131,181,2,En proceso,1.38,65.5,Alta
+129,Puente Piedra,Pasaporte,2026-05-08,48,53,5,Pendiente,1.1,9.6,Baja
+130,Ate,Matrícula,2026-05-14,38,49,1,En proceso,1.28,38,Alta
+131,Chorrillos,Pasaporte,2026-05-03,31,41,5,Pendiente,1.33,6.2,Baja
+132,Ate,Pasaporte,2026-04-19,109,87,4,Completado,0.8,27.25,Media
+133,Santiago de Surco,Permiso de Funcionamiento,2026-05-12,126,156,1,En proceso,1.24,126,Alta
+134,Lima,DNI / Identidad,2026-04-24,108,102,4,Pendiente,0.94,27,Media
+135,Chorrillos,Pasaporte,2026-05-09,113,171,5,Pendiente,1.51,22.6,Media
+136,Carabayllo,Permiso de Funcionamiento,2026-05-14,112,177,5,Pendiente,1.58,22.4,Media
+137,Ate,DNI / Identidad,2026-05-11,26,21,3,En proceso,0.82,8.67,Baja
+138,Carabayllo,Matrícula,2026-05-15,53,65,1,Completado,1.22,53,Alta
+139,Chorrillos,Permiso de Funcionamiento,2026-05-20,136,177,2,Pendiente,1.3,68,Alta
+140,Carabayllo,Certificado,2026-04-09,105,147,3,Pendiente,1.4,35,Media
+141,Los Olivos,Matrícula,2026-04-30,88,132,3,En proceso,1.5,29.33,Media
+142,Carabayllo,Certificado,2026-04-28,127,133,5,En proceso,1.05,25.4,Media
+143,Lima,Certificado,2026-04-09,84,72,6,Completado,0.86,14,Baja
+144,Ate,Pasaporte,2026-04-15,108,109,4,Pendiente,1.01,27,Media
+145,Ate,DNI / Identidad,2026-04-02,87,86,2,Pendiente,0.99,43.5,Alta
+146,Carabayllo,DNI / Identidad,2026-05-02,103,117,4,Completado,1.14,25.75,Media
+147,Puente Piedra,Certificado,2026-04-05,113,112,2,Completado,0.99,56.5,Alta
+148,Ate,Certificado,2026-04-08,93,103,5,Completado,1.11,18.6,Media
+149,Lima,Pasaporte,2026-05-03,122,113,4,En proceso,0.93,30.5,Media
+150,Chorrillos,Matrícula,2026-04-15,100,98,5,Completado,0.98,20,Media
+151,Ate,Certificado,2026-04-08,123,114,5,Completado,0.93,24.6,Media
+152,Puente Piedra,DNI / Identidad,2026-04-18,131,124,6,Pendiente,0.95,21.83,Media
+153,Lima,DNI / Identidad,2026-04-12,36,36,6,Pendiente,0.99,6,Baja
+154,Los Olivos,Pasaporte,2026-05-17,83,66,3,En proceso,0.8,27.67,Media
+155,Ate,Pasaporte,2026-05-08,92,109,3,Pendiente,1.19,30.67,Media
+156,Lima,DNI / Identidad,2026-04-28,89,115,2,Pendiente,1.29,44.5,Alta
+157,Lima,Certificado,2026-04-24,55,59,4,Pendiente,1.07,13.75,Baja
+158,Carabayllo,Matrícula,2026-04-28,86,113,5,Completado,1.31,17.2,Media
+159,Ate,Licencia de Conducir,2026-04-08,141,142,3,Pendiente,1.01,47,Alta
+160,Carabayllo,Licencia de Conducir,2026-04-19,16,17,1,Pendiente,1.09,16,Media
+161,Ate,Licencia de Conducir,2026-04-12,63,81,6,Pendiente,1.28,10.5,Baja
+162,Santiago de Surco,Matrícula,2026-05-15,102,106,6,En proceso,1.04,17,Media
+163,Comas,Matrícula,2026-04-11,117,102,4,En proceso,0.87,29.25,Media
+164,Carabayllo,Licencia de Conducir,2026-04-18,38,46,6,En proceso,1.21,6.33,Baja
+165,Comas,DNI / Identidad,2026-05-18,35,30,6,Completado,0.86,5.83,Baja
+166,Comas,Matrícula,2026-04-09,12,18,2,Completado,1.46,6,Baja
+167,Miraflores,Matrícula,2026-05-07,100,138,1,En proceso,1.38,100,Alta
+168,Puente Piedra,DNI / Identidad,2026-05-19,12,17,3,Completado,1.44,4,Baja
+169,Lima,Pasaporte,2026-04-04,22,33,1,En proceso,1.52,22,Media
+170,Lima,Pasaporte,2026-05-10,14,16,3,En proceso,1.14,4.67,Baja
+171,Los Olivos,Certificado,2026-04-24,11,15,1,Pendiente,1.39,11,Baja
+172,Lima,Certificado,2026-04-09,51,42,6,Pendiente,0.82,8.5,Baja
+173,Los Olivos,Permiso de Funcionamiento,2026-05-19,76,74,2,En proceso,0.97,38,Alta
+174,Chorrillos,Certificado,2026-04-29,92,106,4,En proceso,1.15,23,Media
+175,Puente Piedra,Permiso de Funcionamiento,2026-04-10,71,67,1,Completado,0.94,71,Alta
+176,Ate,Licencia de Conducir,2026-04-29,34,33,4,En proceso,0.96,8.5,Baja
+177,Puente Piedra,Licencia de Conducir,2026-05-19,55,63,5,Pendiente,1.15,11,Baja
+178,Miraflores,Permiso de Funcionamiento,2026-04-06,59,73,5,Completado,1.23,11.8,Baja
+179,Ate,Matrícula,2026-05-15,11,9,5,Completado,0.82,2.2,Baja
+180,Los Olivos,Licencia de Conducir,2026-05-09,84,119,1,Pendiente,1.42,84,Alta
+181,Santiago de Surco,Matrícula,2026-05-04,94,102,5,Pendiente,1.09,18.8,Media
+182,Los Olivos,DNI / Identidad,2026-04-26,46,42,5,Completado,0.92,9.2,Baja
+183,Ate,Certificado,2026-05-09,130,146,2,En proceso,1.12,65,Alta
+184,Chorrillos,Licencia de Conducir,2026-04-28,95,112,5,En proceso,1.18,19,Media
+185,Lima,Matrícula,2026-05-14,38,55,6,Completado,1.46,6.33,Baja
+186,Los Olivos,DNI / Identidad,2026-05-05,84,113,4,Completado,1.35,21,Media
+187,Chorrillos,Pasaporte,2026-05-03,17,16,6,Completado,0.95,2.83,Baja
+188,Comas,Licencia de Conducir,2026-04-01,45,43,3,Pendiente,0.96,15,Baja
+189,Santiago de Surco,Matrícula,2026-04-29,106,108,5,En proceso,1.02,21.2,Media
+190,Ate,Licencia de Conducir,2026-04-06,79,106,5,En proceso,1.34,15.8,Media
+191,Los Olivos,Licencia de Conducir,2026-04-17,52,47,5,Completado,0.9,10.4,Baja
+192,Lima,DNI / Identidad,2026-04-20,107,162,3,Pendiente,1.51,35.67,Alta
+193,Comas,Certificado,2026-04-21,92,117,3,Completado,1.27,30.67,Media
+194,Comas,Permiso de Funcionamiento,2026-04-05,49,42,1,Completado,0.85,49,Alta
+195,Chorrillos,Matrícula,2026-04-18,31,36,5,Completado,1.15,6.2,Baja
+196,Puente Piedra,Certificado,2026-04-11,136,150,5,Pendiente,1.1,27.2,Media
+197,Santiago de Surco,Certificado,2026-04-28,32,37,2,Completado,1.16,16,Media
+198,Ate,Licencia de Conducir,2026-04-16,106,135,4,En proceso,1.27,26.5,Media
+199,Comas,Matrícula,2026-04-13,146,165,1,En proceso,1.13,146,Alta
+200,Carabayllo,Certificado,2026-05-02,137,126,1,Pendiente,0.92,137,Alta
+201,Los Olivos,Matrícula,2026-05-12,61,62,6,En proceso,1.02,10.17,Baja
+202,Carabayllo,Pasaporte,2026-04-03,123,177,6,Pendiente,1.44,20.5,Media
+203,Comas,Certificado,2026-04-27,87,89,2,Pendiente,1.02,43.5,Alta
+204,Ate,Matrícula,2026-04-29,113,115,6,Completado,1.02,18.83,Media
+205,Comas,Permiso de Funcionamiento,2026-05-16,25,34,1,En proceso,1.36,25,Media
+206,Carabayllo,Matrícula,2026-04-19,55,56,5,Completado,1.01,11,Baja
+207,Los Olivos,Licencia de Conducir,2026-04-26,87,85,2,En proceso,0.98,43.5,Alta
+208,Los Olivos,Certificado,2026-04-24,21,31,2,Pendiente,1.48,10.5,Baja
+209,Puente Piedra,Certificado,2026-05-10,110,118,6,Pendiente,1.07,18.33,Media
+210,Chorrillos,Matrícula,2026-04-15,112,147,4,Pendiente,1.31,28,Media
+211,Carabayllo,Matrícula,2026-04-06,35,56,2,Pendiente,1.6,17.5,Media
+212,Chorrillos,Permiso de Funcionamiento,2026-05-12,67,100,3,Completado,1.5,22.33,Media
+213,Miraflores,Permiso de Funcionamiento,2026-04-15,108,163,1,Pendiente,1.51,108,Alta
+214,Carabayllo,Matrícula,2026-05-18,77,66,5,Completado,0.86,15.4,Media
+215,Chorrillos,Pasaporte,2026-04-13,98,86,3,En proceso,0.88,32.67,Media
+216,Chorrillos,DNI / Identidad,2026-04-07,72,112,6,Completado,1.56,12,Baja
+217,Lima,Matrícula,2026-04-26,136,137,5,En proceso,1.01,27.2,Media
+218,Lima,Permiso de Funcionamiento,2026-05-09,38,31,5,En proceso,0.81,7.6,Baja
+219,Santiago de Surco,Pasaporte,2026-04-29,119,132,3,Pendiente,1.11,39.67,Alta
+220,Miraflores,Permiso de Funcionamiento,2026-05-06,139,142,3,Completado,1.02,46.33,Alta
+221,Miraflores,Pasaporte,2026-04-08,75,75,5,Pendiente,1,15,Baja
+222,Miraflores,Permiso de Funcionamiento,2026-04-01,143,206,2,Completado,1.44,71.5,Alta
+223,Carabayllo,Pasaporte,2026-04-09,129,175,2,Completado,1.36,64.5,Alta
+224,Los Olivos,Certificado,2026-04-08,95,130,3,Completado,1.37,31.67,Media
+225,Miraflores,Permiso de Funcionamiento,2026-05-09,36,50,5,Pendiente,1.4,7.2,Baja
+226,Los Olivos,Permiso de Funcionamiento,2026-05-10,23,20,1,Pendiente,0.88,23,Media
+227,Ate,Pasaporte,2026-04-17,142,176,3,Pendiente,1.24,47.33,Alta
+228,Comas,Licencia de Conducir,2026-05-09,109,105,6,Pendiente,0.96,18.17,Media
+229,Lima,Licencia de Conducir,2026-04-08,136,180,2,En proceso,1.32,68,Alta
+230,Puente Piedra,Matrícula,2026-04-25,100,110,2,En proceso,1.1,50,Alta
+231,Santiago de Surco,Certificado,2026-04-06,86,91,5,Completado,1.06,17.2,Media
+232,Miraflores,Matrícula,2026-05-03,148,139,3,Pendiente,0.94,49.33,Alta
+233,Comas,Permiso de Funcionamiento,2026-05-17,58,61,2,Completado,1.05,29,Media
+234,Santiago de Surco,Matrícula,2026-04-19,16,25,3,En proceso,1.58,5.33,Baja
+235,Puente Piedra,DNI / Identidad,2026-05-03,75,118,2,Completado,1.58,37.5,Alta
+236,Miraflores,Certificado,2026-05-19,52,68,5,En proceso,1.31,10.4,Baja
+237,Puente Piedra,Certificado,2026-04-16,60,75,3,En proceso,1.25,20,Media
+238,Miraflores,Permiso de Funcionamiento,2026-04-22,29,29,3,Completado,1,9.67,Baja
+239,Puente Piedra,Permiso de Funcionamiento,2026-04-01,79,115,2,Pendiente,1.45,39.5,Alta
+240,Lima,Permiso de Funcionamiento,2026-04-15,119,125,5,Completado,1.05,23.8,Media
+241,Santiago de Surco,Pasaporte,2026-05-13,134,127,1,Completado,0.95,134,Alta
+242,Miraflores,Licencia de Conducir,2026-04-28,99,80,6,En proceso,0.81,16.5,Media
+243,Miraflores,Pasaporte,2026-05-16,72,86,3,Pendiente,1.19,24,Media
+244,Santiago de Surco,Permiso de Funcionamiento,2026-05-19,65,104,3,Completado,1.6,21.67,Media
+245,Miraflores,Pasaporte,2026-04-28,54,73,6,En proceso,1.35,9,Baja
+246,Lima,Licencia de Conducir,2026-04-07,147,171,5,Completado,1.16,29.4,Media
+247,Miraflores,Licencia de Conducir,2026-04-27,142,172,4,En proceso,1.21,35.5,Alta
+248,Los Olivos,Certificado,2026-04-18,53,75,6,Completado,1.41,8.83,Baja
+249,Miraflores,DNI / Identidad,2026-04-28,10,14,2,Completado,1.45,5,Baja
+250,Lima,DNI / Identidad,2026-04-14,63,59,1,Pendiente,0.93,63,Alta
+251,Santiago de Surco,DNI / Identidad,2026-04-22,103,159,6,Pendiente,1.54,17.17,Media
+252,Comas,DNI / Identidad,2026-04-09,59,52,2,En proceso,0.88,29.5,Media
+253,Miraflores,DNI / Identidad,2026-05-05,127,132,6,En proceso,1.04,21.17,Media
+254,Chorrillos,Pasaporte,2026-05-03,121,145,4,En proceso,1.2,30.25,Media
+255,Los Olivos,Permiso de Funcionamiento,2026-04-12,12,14,2,En proceso,1.17,6,Baja
+256,Miraflores,Licencia de Conducir,2026-04-27,92,132,6,Completado,1.44,15.33,Media
+257,Carabayllo,Licencia de Conducir,2026-04-05,81,126,6,Pendiente,1.55,13.5,Baja
+258,Ate,Certificado,2026-05-08,35,56,6,En proceso,1.59,5.83,Baja
+259,Comas,Certificado,2026-04-10,147,210,6,Pendiente,1.43,24.5,Media
+260,Carabayllo,Certificado,2026-04-25,90,81,3,En proceso,0.9,30,Media
+261,Puente Piedra,Certificado,2026-05-11,31,46,6,En proceso,1.49,5.17,Baja
+262,Lima,Pasaporte,2026-05-02,40,44,5,Pendiente,1.09,8,Baja
+263,Comas,DNI / Identidad,2026-05-20,106,107,6,Completado,1.01,17.67,Media
+264,Los Olivos,Certificado,2026-04-29,106,135,3,Pendiente,1.27,35.33,Alta
+265,Ate,Matrícula,2026-04-10,124,125,1,Completado,1.01,124,Alta
+266,Puente Piedra,Certificado,2026-05-01,10,10,2,Pendiente,1,5,Baja
+267,Puente Piedra,Permiso de Funcionamiento,2026-04-12,13,16,2,Pendiente,1.23,6.5,Baja
+268,Los Olivos,Pasaporte,2026-04-13,109,107,4,En proceso,0.98,27.25,Media
+269,Lima,Matrícula,2026-04-16,140,204,2,Pendiente,1.46,70,Alta
+270,Lima,Certificado,2026-04-06,84,98,6,Completado,1.17,14,Baja
+271,Ate,DNI / Identidad,2026-05-02,147,137,5,Completado,0.93,29.4,Media
+272,Lima,Certificado,2026-04-12,11,13,2,Pendiente,1.22,5.5,Baja
+273,Santiago de Surco,Pasaporte,2026-04-08,125,175,4,Pendiente,1.4,31.25,Media
+274,Carabayllo,Permiso de Funcionamiento,2026-04-17,85,79,3,Pendiente,0.93,28.33,Media
+275,Chorrillos,Permiso de Funcionamiento,2026-04-11,53,45,2,En proceso,0.84,26.5,Media
+276,Ate,Matrícula,2026-04-03,137,140,3,Pendiente,1.02,45.67,Alta
+277,Chorrillos,Matrícula,2026-04-28,16,25,2,En proceso,1.57,8,Baja
+278,Chorrillos,Licencia de Conducir,2026-05-18,86,115,4,Completado,1.34,21.5,Media
+279,Miraflores,Certificado,2026-04-14,109,148,3,En proceso,1.36,36.33,Alta
+280,Carabayllo,DNI / Identidad,2026-04-11,91,98,6,Completado,1.08,15.17,Media
+281,Chorrillos,Certificado,2026-05-11,28,38,5,Pendiente,1.36,5.6,Baja
+282,Carabayllo,Licencia de Conducir,2026-04-19,92,145,6,Completado,1.58,15.33,Media
+283,Santiago de Surco,Matrícula,2026-05-11,94,126,6,Pendiente,1.34,15.67,Media
+284,Santiago de Surco,Matrícula,2026-05-12,107,94,6,En proceso,0.88,17.83,Media
+285,Lima,DNI / Identidad,2026-05-09,12,17,4,En proceso,1.41,3,Baja
+286,Carabayllo,Pasaporte,2026-04-20,16,14,5,En proceso,0.87,3.2,Baja
+287,Puente Piedra,Matrícula,2026-04-11,99,106,1,Completado,1.07,99,Alta
+288,Miraflores,DNI / Identidad,2026-05-14,15,21,5,Pendiente,1.38,3,Baja
+289,Ate,DNI / Identidad,2026-05-14,135,134,2,En proceso,0.99,67.5,Alta
+290,Los Olivos,Matrícula,2026-04-06,114,107,2,Pendiente,0.94,57,Alta
+291,Puente Piedra,Permiso de Funcionamiento,2026-04-10,32,42,5,En proceso,1.32,6.4,Baja
+292,Carabayllo,DNI / Identidad,2026-05-12,95,115,3,En proceso,1.21,31.67,Media
+293,Lima,Certificado,2026-04-26,50,62,3,Completado,1.24,16.67,Media
+294,Lima,DNI / Identidad,2026-04-11,145,162,6,Pendiente,1.12,24.17,Media
+295,Lima,Matrícula,2026-04-22,18,17,3,Completado,0.97,6,Baja
+296,Santiago de Surco,Matrícula,2026-04-20,79,113,1,En proceso,1.43,79,Alta
+297,Los Olivos,Licencia de Conducir,2026-05-14,126,170,5,Completado,1.35,25.2,Media
+298,Carabayllo,Pasaporte,2026-05-09,28,43,3,En proceso,1.54,9.33,Baja
+299,Chorrillos,DNI / Identidad,2026-05-14,64,58,6,En proceso,0.91,10.67,Baja
+300,Carabayllo,Licencia de Conducir,2026-04-11,106,122,2,En proceso,1.15,53,Alta
+301,Ate,DNI / Identidad,2026-04-07,126,188,1,En proceso,1.49,126,Alta
+302,Santiago de Surco,Licencia de Conducir,2026-04-04,110,163,5,Pendiente,1.48,22,Media
+303,Santiago de Surco,Permiso de Funcionamiento,2026-05-14,72,63,4,En proceso,0.88,18,Media
+304,Puente Piedra,Permiso de Funcionamiento,2026-05-20,49,40,1,Completado,0.82,49,Alta
+305,Santiago de Surco,Permiso de Funcionamiento,2026-04-03,19,20,3,Completado,1.05,6.33,Baja
+306,Carabayllo,Matrícula,2026-05-03,64,62,3,Pendiente,0.97,21.33,Media
+307,Los Olivos,Permiso de Funcionamiento,2026-04-29,149,176,2,Completado,1.18,74.5,Alta
+308,Comas,Licencia de Conducir,2026-04-13,86,84,5,Pendiente,0.98,17.2,Media
+309,Lima,Licencia de Conducir,2026-04-18,57,72,1,Pendiente,1.27,57,Alta
+310,Carabayllo,Pasaporte,2026-04-15,53,58,1,Completado,1.1,53,Alta
+311,Miraflores,Pasaporte,2026-04-01,129,155,6,Pendiente,1.2,21.5,Media
+312,Comas,Matrícula,2026-04-11,96,97,5,Pendiente,1.01,19.2,Media
+313,Lima,Pasaporte,2026-04-16,73,77,1,En proceso,1.05,73,Alta
+314,Lima,Licencia de Conducir,2026-04-17,113,93,6,Completado,0.82,18.83,Media
+315,Comas,Pasaporte,2026-05-13,86,129,6,Pendiente,1.5,14.33,Baja
+316,Lima,Certificado,2026-05-07,87,125,1,Completado,1.44,87,Alta
+317,Santiago de Surco,Pasaporte,2026-04-20,143,117,5,Pendiente,0.82,28.6,Media
+318,Carabayllo,Licencia de Conducir,2026-04-28,89,71,2,Pendiente,0.8,44.5,Alta
+319,Puente Piedra,Pasaporte,2026-04-20,35,36,1,Completado,1.02,35,Media
+320,Lima,Certificado,2026-05-03,24,22,6,Pendiente,0.92,4,Baja
+321,Comas,DNI / Identidad,2026-04-07,78,97,6,Pendiente,1.24,13,Baja
+322,Chorrillos,Permiso de Funcionamiento,2026-04-06,133,206,3,Completado,1.55,44.33,Alta
+323,Carabayllo,Certificado,2026-04-13,30,32,1,En proceso,1.07,30,Media
+324,Ate,Pasaporte,2026-04-23,105,154,4,En proceso,1.47,26.25,Media
+325,Puente Piedra,DNI / Identidad,2026-05-10,57,79,2,Pendiente,1.38,28.5,Media
+326,Lima,Permiso de Funcionamiento,2026-04-02,82,127,5,Pendiente,1.55,16.4,Media
+327,Puente Piedra,Certificado,2026-05-02,33,37,6,Completado,1.13,5.5,Baja
+328,Los Olivos,Pasaporte,2026-05-04,11,17,5,En proceso,1.54,2.2,Baja
+329,Chorrillos,Permiso de Funcionamiento,2026-04-02,17,15,2,Pendiente,0.86,8.5,Baja
+330,Miraflores,Certificado,2026-04-25,116,129,3,En proceso,1.11,38.67,Alta
+331,Lima,Permiso de Funcionamiento,2026-05-08,141,197,5,En proceso,1.4,28.2,Media
+332,Carabayllo,Permiso de Funcionamiento,2026-04-27,119,126,6,Completado,1.06,19.83,Media
+333,Santiago de Surco,DNI / Identidad,2026-04-21,106,143,5,En proceso,1.35,21.2,Media
+334,Chorrillos,Permiso de Funcionamiento,2026-05-10,48,45,4,En proceso,0.93,12,Baja
+335,Santiago de Surco,Licencia de Conducir,2026-05-02,117,183,2,Completado,1.56,58.5,Alta
+336,Comas,Certificado,2026-04-15,32,30,2,En proceso,0.95,16,Media
+337,Comas,Pasaporte,2026-04-17,31,41,6,Pendiente,1.33,5.17,Baja
+338,Chorrillos,Certificado,2026-04-24,71,89,6,En proceso,1.26,11.83,Baja
+339,Chorrillos,Pasaporte,2026-04-30,59,51,4,Completado,0.87,14.75,Baja
+340,Lima,Licencia de Conducir,2026-04-02,133,134,1,Completado,1.01,133,Alta
+341,Comas,Matrícula,2026-04-07,150,154,4,Completado,1.03,37.5,Alta
+342,Chorrillos,Matrícula,2026-05-04,23,25,4,En proceso,1.07,5.75,Baja
+343,Santiago de Surco,DNI / Identidad,2026-04-05,68,107,1,Completado,1.57,68,Alta
+344,Chorrillos,DNI / Identidad,2026-05-05,75,68,3,En proceso,0.91,25,Media
+345,Puente Piedra,Matrícula,2026-05-18,104,101,4,Completado,0.97,26,Media
+346,Carabayllo,Licencia de Conducir,2026-04-15,43,61,2,Completado,1.43,21.5,Media
+347,Lima,Certificado,2026-04-17,26,30,3,En proceso,1.16,8.67,Baja
+348,Miraflores,Pasaporte,2026-05-12,96,128,3,En proceso,1.33,32,Media
+349,Ate,Pasaporte,2026-05-06,39,50,2,En proceso,1.27,19.5,Media
+350,Miraflores,Certificado,2026-04-12,27,23,1,Pendiente,0.86,27,Media
+351,Lima,DNI / Identidad,2026-05-02,37,44,5,Pendiente,1.2,7.4,Baja
+352,Los Olivos,Matrícula,2026-05-16,44,49,2,En proceso,1.11,22,Media
+353,Ate,Certificado,2026-04-24,143,217,2,Pendiente,1.52,71.5,Alta
+354,Ate,Licencia de Conducir,2026-04-06,93,76,1,En proceso,0.82,93,Alta
+355,Los Olivos,Matrícula,2026-04-09,28,36,2,Completado,1.27,14,Baja
+356,Chorrillos,Licencia de Conducir,2026-05-18,44,49,3,Completado,1.11,14.67,Baja
+357,Comas,Pasaporte,2026-05-03,75,70,5,En proceso,0.94,15,Baja
+358,Comas,Matrícula,2026-04-30,74,114,4,En proceso,1.54,18.5,Media
+359,Los Olivos,DNI / Identidad,2026-04-22,30,44,2,Pendiente,1.45,15,Baja
+360,Miraflores,DNI / Identidad,2026-05-04,43,42,3,Completado,0.97,14.33,Baja
+361,Los Olivos,DNI / Identidad,2026-04-24,46,61,1,En proceso,1.33,46,Alta
+362,Puente Piedra,Matrícula,2026-04-21,88,135,6,Completado,1.53,14.67,Baja
+363,Ate,Certificado,2026-05-19,52,45,3,Pendiente,0.87,17.33,Media
+364,Santiago de Surco,Licencia de Conducir,2026-05-02,57,88,5,En proceso,1.55,11.4,Baja
+365,Lima,DNI / Identidad,2026-04-08,126,127,5,En proceso,1.01,25.2,Media
+366,Miraflores,DNI / Identidad,2026-04-25,140,130,1,Completado,0.93,140,Alta
+367,Santiago de Surco,Licencia de Conducir,2026-04-25,65,81,5,Pendiente,1.24,13,Baja
+368,Miraflores,DNI / Identidad,2026-05-01,128,177,2,Completado,1.38,64,Alta
+369,Chorrillos,Certificado,2026-04-12,125,195,1,Completado,1.56,125,Alta
+370,Miraflores,Permiso de Funcionamiento,2026-05-10,100,94,5,En proceso,0.94,20,Media
+371,Carabayllo,Licencia de Conducir,2026-05-14,75,106,2,Completado,1.41,37.5,Alta
+372,Chorrillos,Licencia de Conducir,2026-04-10,119,158,6,Pendiente,1.33,19.83,Media
+373,Lima,Certificado,2026-05-01,11,14,2,Pendiente,1.28,5.5,Baja
+374,Ate,Licencia de Conducir,2026-04-07,36,44,3,Completado,1.21,12,Baja
+375,Santiago de Surco,DNI / Identidad,2026-05-01,127,184,3,En proceso,1.45,42.33,Alta
+376,Los Olivos,DNI / Identidad,2026-05-05,59,71,5,Completado,1.2,11.8,Baja
+377,Ate,Certificado,2026-04-30,137,188,5,En proceso,1.37,27.4,Media
+378,Puente Piedra,Matrícula,2026-04-28,56,47,2,Pendiente,0.84,28,Media
+379,Santiago de Surco,Licencia de Conducir,2026-04-14,108,173,3,Completado,1.6,36,Alta
+380,Santiago de Surco,Certificado,2026-05-04,110,148,5,Pendiente,1.35,22,Media
+381,Ate,DNI / Identidad,2026-05-11,135,170,4,En proceso,1.26,33.75,Media
+382,Santiago de Surco,Licencia de Conducir,2026-05-07,138,186,1,En proceso,1.35,138,Alta
+383,Lima,Matrícula,2026-05-04,66,64,4,En proceso,0.97,16.5,Media
+384,Los Olivos,DNI / Identidad,2026-04-16,113,111,1,Pendiente,0.98,113,Alta
+385,Puente Piedra,Permiso de Funcionamiento,2026-04-24,50,62,1,Completado,1.24,50,Alta
+386,Miraflores,Pasaporte,2026-05-10,70,83,5,Pendiente,1.18,14,Baja
+387,Lima,Licencia de Conducir,2026-04-01,22,35,5,En proceso,1.58,4.4,Baja
+388,Ate,Permiso de Funcionamiento,2026-04-11,94,134,6,Completado,1.43,15.67,Media
+389,Chorrillos,Matrícula,2026-05-13,88,93,3,Completado,1.06,29.33,Media
+390,Puente Piedra,Permiso de Funcionamiento,2026-05-10,68,58,1,Completado,0.86,68,Alta
+391,Ate,Pasaporte,2026-04-15,116,96,5,Pendiente,0.83,23.2,Media
+392,Comas,Licencia de Conducir,2026-05-12,143,186,1,Pendiente,1.3,143,Alta
+393,Miraflores,Certificado,2026-04-10,75,82,1,Pendiente,1.1,75,Alta
+394,Ate,Licencia de Conducir,2026-05-09,15,22,6,Completado,1.45,2.5,Baja
+395,Los Olivos,Licencia de Conducir,2026-04-25,91,96,1,En proceso,1.06,91,Alta
+396,Lima,Matrícula,2026-04-18,129,183,3,En proceso,1.42,43,Alta
+397,Lima,Certificado,2026-05-17,139,158,2,Completado,1.14,69.5,Alta
+398,Ate,Permiso de Funcionamiento,2026-05-09,97,79,1,Pendiente,0.81,97,Alta
+399,Chorrillos,Licencia de Conducir,2026-04-26,111,125,4,Completado,1.13,27.75,Media
+400,Chorrillos,Matrícula,2026-05-15,122,127,5,Pendiente,1.04,24.4,Media
+401,Comas,Certificado,2026-05-08,96,84,5,Completado,0.88,19.2,Media
+402,Santiago de Surco,Matrícula,2026-04-12,66,56,5,Pendiente,0.85,13.2,Baja
+403,Carabayllo,DNI / Identidad,2026-05-03,61,88,3,Pendiente,1.44,20.33,Media
+404,Carabayllo,Certificado,2026-04-13,106,130,2,En proceso,1.23,53,Alta
+405,Santiago de Surco,Certificado,2026-05-13,57,51,1,Completado,0.89,57,Alta
+406,Los Olivos,Permiso de Funcionamiento,2026-04-29,91,80,4,Completado,0.88,22.75,Media
+407,Miraflores,Certificado,2026-04-28,134,149,4,En proceso,1.11,33.5,Media
+408,Carabayllo,Certificado,2026-04-01,58,72,6,Pendiente,1.25,9.67,Baja
+409,Lima,DNI / Identidad,2026-05-14,72,80,1,Pendiente,1.11,72,Alta
+410,Los Olivos,Permiso de Funcionamiento,2026-05-09,33,29,6,En proceso,0.89,5.5,Baja
+411,Comas,Matrícula,2026-05-04,138,214,1,Completado,1.55,138,Alta
+412,Santiago de Surco,Certificado,2026-04-11,46,46,3,Pendiente,1,15.33,Media
+413,Los Olivos,Licencia de Conducir,2026-04-26,81,113,2,En proceso,1.4,40.5,Alta
+414,Santiago de Surco,DNI / Identidad,2026-04-13,70,91,3,Pendiente,1.3,23.33,Media
+415,Santiago de Surco,Permiso de Funcionamiento,2026-05-19,60,92,6,Completado,1.53,10,Baja
+416,Ate,DNI / Identidad,2026-05-11,122,151,3,Pendiente,1.24,40.67,Alta
+417,Miraflores,Licencia de Conducir,2026-05-10,130,130,2,En proceso,1,65,Alta
+418,Miraflores,Certificado,2026-05-15,120,190,3,En proceso,1.58,40,Alta
+419,Santiago de Surco,Certificado,2026-05-04,42,56,2,Completado,1.33,21,Media
+420,Puente Piedra,Licencia de Conducir,2026-05-14,104,106,4,En proceso,1.02,26,Media
+421,Carabayllo,Permiso de Funcionamiento,2026-05-10,132,186,5,En proceso,1.41,26.4,Media
+422,Miraflores,Licencia de Conducir,2026-05-01,148,228,1,Pendiente,1.54,148,Alta
+423,Miraflores,Certificado,2026-05-03,43,54,5,En proceso,1.26,8.6,Baja
+424,Santiago de Surco,Pasaporte,2026-04-26,61,50,4,En proceso,0.82,15.25,Media
+425,Los Olivos,Licencia de Conducir,2026-05-06,129,191,6,En proceso,1.48,21.5,Media
+426,Carabayllo,Licencia de Conducir,2026-04-18,116,100,4,Completado,0.86,29,Media
+427,Carabayllo,Pasaporte,2026-04-10,86,133,1,Completado,1.55,86,Alta
+428,Chorrillos,Matrícula,2026-05-07,29,27,2,Completado,0.94,14.5,Baja
+429,Santiago de Surco,Pasaporte,2026-05-14,150,202,4,Pendiente,1.35,37.5,Alta
+430,Santiago de Surco,DNI / Identidad,2026-04-10,63,96,4,Completado,1.53,15.75,Media
+431,Santiago de Surco,Licencia de Conducir,2026-04-28,127,141,5,En proceso,1.11,25.4,Media
+432,Miraflores,Permiso de Funcionamiento,2026-04-17,30,25,1,Pendiente,0.83,30,Media
+433,Comas,Licencia de Conducir,2026-05-05,16,19,6,En proceso,1.21,2.67,Baja
+434,Santiago de Surco,Certificado,2026-05-11,111,153,5,Completado,1.38,22.2,Media
+435,Puente Piedra,Permiso de Funcionamiento,2026-05-08,47,57,2,Pendiente,1.22,23.5,Media
+436,Chorrillos,Permiso de Funcionamiento,2026-04-10,71,94,5,Pendiente,1.33,14.2,Baja
+437,Comas,Pasaporte,2026-04-16,84,81,6,Completado,0.97,14,Baja
+438,Miraflores,DNI / Identidad,2026-04-09,32,39,5,En proceso,1.23,6.4,Baja
+439,Miraflores,Permiso de Funcionamiento,2026-05-18,137,138,3,Completado,1.01,45.67,Alta
+440,Ate,Matrícula,2026-04-27,36,50,2,Pendiente,1.4,18,Media
+441,Miraflores,DNI / Identidad,2026-04-16,49,60,5,Pendiente,1.23,9.8,Baja
+442,Comas,Permiso de Funcionamiento,2026-05-11,87,128,6,En proceso,1.47,14.5,Baja
+443,Los Olivos,DNI / Identidad,2026-04-13,46,41,5,En proceso,0.9,9.2,Baja
+444,Comas,DNI / Identidad,2026-05-08,45,42,6,En proceso,0.94,7.5,Baja
+445,Carabayllo,Licencia de Conducir,2026-04-23,130,139,6,Pendiente,1.07,21.67,Media
+446,Santiago de Surco,Permiso de Funcionamiento,2026-05-19,106,95,4,Completado,0.9,26.5,Media
+447,Puente Piedra,Licencia de Conducir,2026-05-19,34,54,4,Completado,1.59,8.5,Baja
+448,Lima,Licencia de Conducir,2026-04-24,20,23,1,Completado,1.15,20,Media
+449,Ate,Permiso de Funcionamiento,2026-05-03,90,74,3,Pendiente,0.82,30,Media
+450,Ate,Licencia de Conducir,2026-04-05,43,43,5,En proceso,1,8.6,Baja
+451,Ate,Matrícula,2026-04-13,100,154,5,En proceso,1.54,20,Media
+452,Carabayllo,Permiso de Funcionamiento,2026-05-04,139,135,2,En proceso,0.97,69.5,Alta
+453,Carabayllo,Certificado,2026-04-22,96,94,5,Completado,0.98,19.2,Media
+454,Ate,Certificado,2026-05-12,110,131,1,Completado,1.19,110,Alta
+455,Los Olivos,Matrícula,2026-05-02,146,174,3,Completado,1.19,48.67,Alta
+456,Lima,Pasaporte,2026-04-20,142,151,6,Completado,1.06,23.67,Media
+457,Lima,Permiso de Funcionamiento,2026-04-16,33,49,2,En proceso,1.49,16.5,Media
+458,Lima,Licencia de Conducir,2026-04-11,78,69,6,Completado,0.89,13,Baja
+459,Carabayllo,Matrícula,2026-05-19,58,56,3,Completado,0.96,19.33,Media
+460,Comas,Permiso de Funcionamiento,2026-05-06,115,93,5,Completado,0.81,23,Media
+461,Ate,DNI / Identidad,2026-04-04,145,119,6,Completado,0.82,24.17,Media
+462,Miraflores,Pasaporte,2026-04-21,13,17,6,Pendiente,1.32,2.17,Baja
+463,Ate,Pasaporte,2026-04-01,133,125,4,Pendiente,0.94,33.25,Media
+464,Los Olivos,Pasaporte,2026-05-07,11,14,5,Pendiente,1.26,2.2,Baja
+465,Los Olivos,Certificado,2026-05-08,11,13,2,Completado,1.18,5.5,Baja
+466,Chorrillos,Matrícula,2026-05-06,142,129,6,En proceso,0.91,23.67,Media
+467,Ate,Licencia de Conducir,2026-05-12,33,42,1,En proceso,1.27,33,Media
+468,Carabayllo,Pasaporte,2026-04-27,13,15,5,Completado,1.13,2.6,Baja
+469,Los Olivos,Matrícula,2026-04-21,142,159,3,Completado,1.12,47.33,Alta
+470,Puente Piedra,Licencia de Conducir,2026-05-06,121,121,4,Completado,1,30.25,Media
+471,Carabayllo,Certificado,2026-04-11,148,231,1,Pendiente,1.56,148,Alta
+472,Comas,Licencia de Conducir,2026-04-01,41,46,2,Pendiente,1.13,20.5,Media
+473,Miraflores,Licencia de Conducir,2026-04-03,27,22,6,En proceso,0.81,4.5,Baja
+474,Carabayllo,Permiso de Funcionamiento,2026-04-13,51,44,1,Pendiente,0.86,51,Alta
+475,Puente Piedra,Pasaporte,2026-04-19,143,163,1,Pendiente,1.14,143,Alta
+476,Ate,Permiso de Funcionamiento,2026-05-06,52,68,6,En proceso,1.3,8.67,Baja
+477,Los Olivos,Matrícula,2026-04-29,140,197,6,En proceso,1.41,23.33,Media
+478,Carabayllo,Permiso de Funcionamiento,2026-04-06,85,73,4,Pendiente,0.86,21.25,Media
+479,Comas,Licencia de Conducir,2026-04-21,89,108,2,Completado,1.21,44.5,Alta
+480,Puente Piedra,Matrícula,2026-04-24,35,48,2,En proceso,1.38,17.5,Media
+481,Lima,Pasaporte,2026-05-14,51,42,2,En proceso,0.82,25.5,Media
+482,Ate,Matrícula,2026-04-24,145,216,3,Pendiente,1.49,48.33,Alta
+483,Santiago de Surco,Certificado,2026-04-13,121,140,4,Pendiente,1.16,30.25,Media
+484,Chorrillos,Pasaporte,2026-05-17,44,40,3,En proceso,0.91,14.67,Baja
+485,Los Olivos,Certificado,2026-05-12,53,78,4,Pendiente,1.48,13.25,Baja
+486,Carabayllo,Certificado,2026-04-11,73,101,4,Pendiente,1.39,18.25,Media
+487,Ate,Permiso de Funcionamiento,2026-05-09,45,67,4,En proceso,1.49,11.25,Baja
+488,Comas,Pasaporte,2026-04-06,142,153,1,En proceso,1.08,142,Alta
+489,Miraflores,Pasaporte,2026-04-27,108,105,6,Completado,0.97,18,Media
+490,Santiago de Surco,DNI / Identidad,2026-04-26,145,210,3,Pendiente,1.45,48.33,Alta
+491,Puente Piedra,Licencia de Conducir,2026-05-02,33,37,3,Completado,1.11,11,Baja
+492,Lima,DNI / Identidad,2026-04-10,12,10,1,En proceso,0.86,12,Baja
+493,Los Olivos,Permiso de Funcionamiento,2026-04-09,142,176,4,Pendiente,1.24,35.5,Alta
+494,Lima,Permiso de Funcionamiento,2026-05-05,42,58,4,Completado,1.39,10.5,Baja
+495,Santiago de Surco,Licencia de Conducir,2026-05-13,128,147,6,Completado,1.15,21.33,Media
+496,Chorrillos,Pasaporte,2026-04-20,139,186,6,Completado,1.34,23.17,Media
+497,Miraflores,Matrícula,2026-04-13,31,49,5,Completado,1.59,6.2,Baja
+498,Los Olivos,Matrícula,2026-04-20,84,116,5,En proceso,1.38,16.8,Media
+499,Santiago de Surco,Matrícula,2026-04-22,35,56,5,Completado,1.59,7,Baja
+500,Los Olivos,Matrícula,2026-05-18,143,210,6,Completado,1.47,23.83,Media
+501,Lima,Certificado,2026-04-24,111,89,6,En proceso,0.8,18.5,Media
+502,Ate,Matrícula,2026-04-03,22,28,1,Pendiente,1.25,22,Media
+503,Miraflores,Pasaporte,2026-04-10,44,54,5,Pendiente,1.23,8.8,Baja
+504,Puente Piedra,DNI / Identidad,2026-05-09,48,61,6,Completado,1.27,8,Baja
+505,Carabayllo,Pasaporte,2026-04-02,31,46,5,Pendiente,1.48,6.2,Baja
+506,Lima,Pasaporte,2026-04-30,71,73,1,En proceso,1.03,71,Alta
+507,Santiago de Surco,Certificado,2026-05-03,136,133,6,Completado,0.98,22.67,Media
+508,Puente Piedra,DNI / Identidad,2026-04-01,40,62,4,En proceso,1.56,10,Baja
+509,Comas,Matrícula,2026-04-03,73,106,1,Completado,1.45,73,Alta
+510,Miraflores,Certificado,2026-05-05,115,117,4,En proceso,1.02,28.75,Media
+511,Carabayllo,Permiso de Funcionamiento,2026-05-01,111,112,3,Pendiente,1.01,37,Alta
+512,Santiago de Surco,Licencia de Conducir,2026-04-25,29,28,3,Completado,0.95,9.67,Baja
+513,Lima,Pasaporte,2026-05-01,130,112,2,Completado,0.86,65,Alta
+514,Ate,DNI / Identidad,2026-05-13,48,66,3,En proceso,1.38,16,Media
+515,Puente Piedra,DNI / Identidad,2026-05-15,139,118,5,Pendiente,0.85,27.8,Media
+516,Carabayllo,Certificado,2026-04-06,95,88,4,En proceso,0.93,23.75,Media
+517,Puente Piedra,Certificado,2026-04-03,97,84,6,Pendiente,0.87,16.17,Media
+518,Miraflores,Certificado,2026-04-12,125,161,6,Pendiente,1.29,20.83,Media
+519,Puente Piedra,Certificado,2026-05-04,122,118,6,En proceso,0.97,20.33,Media
+520,Miraflores,Certificado,2026-04-02,83,96,3,Completado,1.16,27.67,Media
+521,Miraflores,Matrícula,2026-05-16,150,136,5,Pendiente,0.91,30,Media
+522,Lima,DNI / Identidad,2026-05-07,36,40,1,En proceso,1.11,36,Alta
+523,Chorrillos,DNI / Identidad,2026-04-26,64,79,5,Completado,1.23,12.8,Baja
+524,Comas,DNI / Identidad,2026-04-18,49,54,6,En proceso,1.1,8.17,Baja
+525,Puente Piedra,Certificado,2026-04-08,141,179,1,Completado,1.27,141,Alta
+526,Comas,Matrícula,2026-05-07,48,73,6,En proceso,1.53,8,Baja
+527,Los Olivos,Pasaporte,2026-04-11,108,166,3,Completado,1.54,36,Alta
+528,Chorrillos,DNI / Identidad,2026-05-01,87,88,2,En proceso,1.01,43.5,Alta
+529,Carabayllo,Pasaporte,2026-04-29,61,76,2,En proceso,1.24,30.5,Media
+530,Miraflores,DNI / Identidad,2026-04-05,106,121,5,Pendiente,1.14,21.2,Media
+531,Carabayllo,Matrícula,2026-04-16,52,64,4,Completado,1.23,13,Baja
+532,Comas,Licencia de Conducir,2026-04-02,89,83,1,Completado,0.93,89,Alta
+533,Comas,Certificado,2026-04-15,41,59,6,Pendiente,1.43,6.83,Baja
+534,Los Olivos,Licencia de Conducir,2026-04-02,71,103,4,Completado,1.45,17.75,Media
+535,Chorrillos,Certificado,2026-04-29,142,172,1,Pendiente,1.21,142,Alta
+536,Carabayllo,Permiso de Funcionamiento,2026-05-19,59,68,6,Pendiente,1.16,9.83,Baja
+537,Santiago de Surco,Licencia de Conducir,2026-05-11,87,123,5,Completado,1.41,17.4,Media
+538,Miraflores,Matrícula,2026-04-05,86,74,2,Completado,0.86,43,Alta
+539,Puente Piedra,Certificado,2026-04-02,119,113,6,Completado,0.95,19.83,Media
+540,Comas,Matrícula,2026-04-24,148,152,2,Pendiente,1.03,74,Alta
+541,Puente Piedra,DNI / Identidad,2026-05-02,62,73,4,En proceso,1.18,15.5,Media
+542,Chorrillos,DNI / Identidad,2026-05-14,12,15,4,Completado,1.24,3,Baja
+543,Ate,Certificado,2026-05-05,129,191,6,Completado,1.48,21.5,Media
+544,Lima,Matrícula,2026-04-23,109,110,6,Pendiente,1.01,18.17,Media
+545,Chorrillos,Pasaporte,2026-05-16,119,100,3,Completado,0.84,39.67,Alta
+546,Lima,DNI / Identidad,2026-04-11,27,33,6,Pendiente,1.24,4.5,Baja
+547,Chorrillos,DNI / Identidad,2026-05-13,130,166,1,Pendiente,1.28,130,Alta
+548,Ate,Pasaporte,2026-05-11,56,59,1,En proceso,1.06,56,Alta
+549,Santiago de Surco,Certificado,2026-05-07,98,107,1,En proceso,1.09,98,Alta
+550,Comas,DNI / Identidad,2026-05-02,92,129,4,Completado,1.4,23,Media
+551,Chorrillos,Matrícula,2026-05-19,56,86,2,Pendiente,1.53,28,Media
+552,Lima,Matrícula,2026-05-19,122,133,1,Completado,1.09,122,Alta
+553,Santiago de Surco,Matrícula,2026-04-21,122,113,5,Completado,0.93,24.4,Media
+554,Carabayllo,Pasaporte,2026-05-08,81,115,3,Completado,1.42,27,Media
+555,Ate,Licencia de Conducir,2026-04-12,16,19,4,Pendiente,1.17,4,Baja
+556,Puente Piedra,Matrícula,2026-05-13,37,58,6,Completado,1.57,6.17,Baja
+557,Ate,Permiso de Funcionamiento,2026-04-11,67,94,1,Pendiente,1.41,67,Alta
+558,Ate,Permiso de Funcionamiento,2026-04-11,43,64,4,Completado,1.49,10.75,Baja
+559,Carabayllo,Certificado,2026-04-25,78,68,5,En proceso,0.87,15.6,Media
+560,Miraflores,Pasaporte,2026-05-06,116,129,1,Pendiente,1.11,116,Alta
+561,Ate,Certificado,2026-04-16,84,91,6,Pendiente,1.08,14,Baja
+562,Miraflores,DNI / Identidad,2026-04-02,145,218,6,En proceso,1.5,24.17,Media
+563,Chorrillos,Permiso de Funcionamiento,2026-05-03,97,146,2,En proceso,1.51,48.5,Alta
+564,Santiago de Surco,Permiso de Funcionamiento,2026-05-15,49,56,6,En proceso,1.15,8.17,Baja
+565,Ate,Matrícula,2026-04-04,52,72,3,Completado,1.38,17.33,Media
+566,Ate,Permiso de Funcionamiento,2026-04-16,47,48,5,Completado,1.03,9.4,Baja
+567,Comas,Certificado,2026-04-16,98,104,2,Completado,1.06,49,Alta
+568,Comas,Pasaporte,2026-05-19,142,173,2,Completado,1.22,71,Alta
+569,Lima,DNI / Identidad,2026-04-21,35,43,1,En proceso,1.23,35,Media
+570,Comas,DNI / Identidad,2026-05-06,139,207,4,En proceso,1.49,34.75,Media
+571,Lima,Licencia de Conducir,2026-05-11,121,182,1,Pendiente,1.5,121,Alta
+572,Chorrillos,DNI / Identidad,2026-04-21,25,27,5,Pendiente,1.07,5,Baja
+573,Santiago de Surco,Licencia de Conducir,2026-04-15,96,151,3,Completado,1.57,32,Media
+574,Puente Piedra,Licencia de Conducir,2026-04-08,45,60,5,Pendiente,1.33,9,Baja
+575,Carabayllo,Matrícula,2026-05-17,82,89,6,Completado,1.09,13.67,Baja
+576,Lima,Pasaporte,2026-04-07,58,92,2,Pendiente,1.58,29,Media
+577,Lima,DNI / Identidad,2026-05-05,61,65,2,Completado,1.06,30.5,Media
+578,Chorrillos,Permiso de Funcionamiento,2026-05-14,101,142,6,Completado,1.41,16.83,Media
+579,Lima,Licencia de Conducir,2026-04-06,116,148,6,En proceso,1.28,19.33,Media
+580,Ate,Pasaporte,2026-05-02,141,221,4,Completado,1.57,35.25,Alta
+581,Miraflores,DNI / Identidad,2026-05-17,70,103,4,En proceso,1.47,17.5,Media
+582,Chorrillos,Permiso de Funcionamiento,2026-05-07,28,26,1,Completado,0.93,28,Media
+583,Lima,Licencia de Conducir,2026-05-03,137,218,2,Pendiente,1.59,68.5,Alta
+584,Chorrillos,Licencia de Conducir,2026-05-14,23,31,3,Pendiente,1.35,7.67,Baja
+585,Puente Piedra,Pasaporte,2026-05-20,95,85,1,Completado,0.89,95,Alta
+586,Miraflores,Matrícula,2026-04-27,47,71,2,En proceso,1.51,23.5,Media
+587,Lima,DNI / Identidad,2026-05-09,57,56,4,Pendiente,0.99,14.25,Baja
+588,Ate,Licencia de Conducir,2026-04-19,88,84,6,Pendiente,0.95,14.67,Baja
+589,Miraflores,Pasaporte,2026-05-10,115,129,5,Completado,1.12,23,Media
+590,Los Olivos,DNI / Identidad,2026-05-08,68,69,2,Pendiente,1.01,34,Media
+591,Comas,Matrícula,2026-05-14,131,118,1,Completado,0.9,131,Alta
+592,Carabayllo,Matrícula,2026-04-30,43,54,5,En proceso,1.25,8.6,Baja
+593,Lima,Certificado,2026-04-03,12,11,6,Completado,0.93,2,Baja
+594,Santiago de Surco,Permiso de Funcionamiento,2026-05-15,34,32,2,En proceso,0.93,17,Media
+595,Santiago de Surco,Licencia de Conducir,2026-04-14,24,33,1,Completado,1.37,24,Media
+596,Chorrillos,DNI / Identidad,2026-05-09,73,111,2,Pendiente,1.52,36.5,Alta
+597,Carabayllo,Certificado,2026-04-25,21,26,2,En proceso,1.26,10.5,Baja
+598,Lima,Matrícula,2026-05-12,62,95,4,Completado,1.54,15.5,Media
+599,Miraflores,Matrícula,2026-05-02,11,17,4,En proceso,1.57,2.75,Baja
+600,Lima,Permiso de Funcionamiento,2026-04-18,81,121,4,En proceso,1.49,20.25,Media
+601,Chorrillos,Licencia de Conducir,2026-05-16,18,19,1,Pendiente,1.03,18,Media
+602,Chorrillos,DNI / Identidad,2026-04-29,30,42,6,En proceso,1.39,5,Baja
+603,Lima,Certificado,2026-04-08,83,88,4,Pendiente,1.06,20.75,Media
+604,Lima,Matrícula,2026-04-11,110,108,2,En proceso,0.98,55,Alta
+605,Miraflores,Matrícula,2026-04-29,103,161,3,Completado,1.56,34.33,Media
+606,Ate,Certificado,2026-04-17,69,101,4,Completado,1.47,17.25,Media
+607,Puente Piedra,Matrícula,2026-05-08,16,17,4,Pendiente,1.09,4,Baja
+608,Puente Piedra,Permiso de Funcionamiento,2026-04-17,106,114,2,En proceso,1.08,53,Alta
+609,Santiago de Surco,Permiso de Funcionamiento,2026-05-08,45,41,4,En proceso,0.91,11.25,Baja
+610,Carabayllo,DNI / Identidad,2026-04-18,15,12,3,En proceso,0.81,5,Baja
+611,Carabayllo,Permiso de Funcionamiento,2026-04-29,114,160,2,En proceso,1.4,57,Alta
+612,Santiago de Surco,Pasaporte,2026-05-12,142,139,4,Completado,0.98,35.5,Alta
+613,Santiago de Surco,Pasaporte,2026-05-04,35,50,3,En proceso,1.44,11.67,Baja
+614,Santiago de Surco,Certificado,2026-05-19,135,143,5,En proceso,1.06,27,Media
+615,Lima,Pasaporte,2026-04-03,19,19,4,Completado,1.01,4.75,Baja
+616,Santiago de Surco,DNI / Identidad,2026-05-12,57,55,1,Completado,0.97,57,Alta
+617,Miraflores,Licencia de Conducir,2026-04-30,28,36,5,Pendiente,1.28,5.6,Baja
+618,Puente Piedra,Pasaporte,2026-04-02,27,37,2,Pendiente,1.38,13.5,Baja
+619,Miraflores,Matrícula,2026-04-04,34,30,4,Completado,0.89,8.5,Baja
+620,Comas,Permiso de Funcionamiento,2026-05-19,53,81,5,En proceso,1.53,10.6,Baja
+621,Carabayllo,Matrícula,2026-04-15,96,143,2,Completado,1.49,48,Alta
+622,Puente Piedra,Matrícula,2026-04-11,72,80,3,Completado,1.11,24,Media
+623,Chorrillos,Pasaporte,2026-05-02,137,178,4,Pendiente,1.3,34.25,Media
+624,Comas,Certificado,2026-04-29,45,52,6,Completado,1.15,7.5,Baja
+625,Carabayllo,Licencia de Conducir,2026-05-18,101,136,6,Completado,1.35,16.83,Media
+626,Miraflores,DNI / Identidad,2026-04-30,80,106,4,Pendiente,1.33,20,Media
+627,Puente Piedra,Permiso de Funcionamiento,2026-05-15,26,21,1,Pendiente,0.81,26,Media
+628,Los Olivos,Matrícula,2026-04-13,88,101,4,En proceso,1.15,22,Media
+629,Puente Piedra,Certificado,2026-04-29,143,203,1,Pendiente,1.42,143,Alta
+630,Los Olivos,Pasaporte,2026-05-02,79,103,6,Pendiente,1.31,13.17,Baja
+631,Puente Piedra,Permiso de Funcionamiento,2026-04-14,68,90,1,Pendiente,1.32,68,Alta
+632,Santiago de Surco,Pasaporte,2026-04-10,114,179,4,Completado,1.57,28.5,Media
+633,Chorrillos,Matrícula,2026-05-19,71,106,2,En proceso,1.5,35.5,Alta
+634,Miraflores,Certificado,2026-04-22,48,50,6,Pendiente,1.05,8,Baja
+635,Los Olivos,Certificado,2026-04-13,148,206,3,En proceso,1.39,49.33,Alta
+636,Santiago de Surco,Certificado,2026-04-06,105,141,3,Completado,1.34,35,Media
+637,Santiago de Surco,Matrícula,2026-05-11,25,38,6,En proceso,1.54,4.17,Baja
+638,Los Olivos,Pasaporte,2026-05-16,32,51,3,Completado,1.59,10.67,Baja
+639,Comas,Certificado,2026-05-05,120,169,6,Completado,1.41,20,Media
+640,Ate,DNI / Identidad,2026-04-06,49,65,2,Pendiente,1.33,24.5,Media
+641,Los Olivos,Pasaporte,2026-04-11,24,29,3,Completado,1.19,8,Baja
+642,Ate,Certificado,2026-04-01,126,168,1,Pendiente,1.33,126,Alta
+643,Chorrillos,Certificado,2026-04-12,46,47,2,Completado,1.03,23,Media
+644,Chorrillos,Matrícula,2026-04-25,32,50,2,En proceso,1.55,16,Media
+645,Comas,DNI / Identidad,2026-04-08,35,31,6,Completado,0.88,5.83,Baja
+646,Lima,Pasaporte,2026-04-03,57,52,3,En proceso,0.92,19,Media
+647,Los Olivos,Licencia de Conducir,2026-05-14,28,23,5,En proceso,0.83,5.6,Baja
+648,Ate,Matrícula,2026-05-12,20,25,6,En proceso,1.23,3.33,Baja
+649,Lima,Permiso de Funcionamiento,2026-05-14,78,98,2,En proceso,1.26,39,Alta
+650,Chorrillos,Matrícula,2026-05-04,54,74,1,Completado,1.37,54,Alta
+651,Puente Piedra,Pasaporte,2026-05-19,69,77,4,En proceso,1.11,17.25,Media
+652,Lima,Licencia de Conducir,2026-05-17,124,182,3,En proceso,1.47,41.33,Alta
+653,Los Olivos,Permiso de Funcionamiento,2026-05-14,102,92,4,Completado,0.9,25.5,Media
+654,Carabayllo,Pasaporte,2026-05-16,135,197,1,En proceso,1.46,135,Alta
+655,Carabayllo,Certificado,2026-04-09,15,12,1,En proceso,0.82,15,Baja
+656,Carabayllo,Permiso de Funcionamiento,2026-05-11,105,94,3,Pendiente,0.9,35,Media
+657,Carabayllo,Matrícula,2026-04-19,101,86,5,Completado,0.85,20.2,Media
+658,Ate,Matrícula,2026-04-09,106,170,6,Pendiente,1.6,17.67,Media
+659,Carabayllo,Permiso de Funcionamiento,2026-04-14,116,177,5,Completado,1.53,23.2,Media
+660,Ate,Matrícula,2026-05-16,122,142,3,En proceso,1.16,40.67,Alta
+661,Lima,Pasaporte,2026-04-26,72,73,6,En proceso,1.02,12,Baja
+662,Chorrillos,Certificado,2026-04-07,134,137,5,Completado,1.02,26.8,Media
+663,Lima,Permiso de Funcionamiento,2026-05-20,60,71,2,Pendiente,1.19,30,Media
+664,Miraflores,Licencia de Conducir,2026-04-27,79,98,2,Completado,1.24,39.5,Alta
+665,Los Olivos,Pasaporte,2026-05-01,22,31,5,En proceso,1.43,4.4,Baja
+666,Los Olivos,Matrícula,2026-04-28,121,140,5,Pendiente,1.16,24.2,Media
+667,Carabayllo,Pasaporte,2026-04-30,145,199,3,En proceso,1.37,48.33,Alta
+668,Santiago de Surco,DNI / Identidad,2026-04-10,84,119,3,Pendiente,1.42,28,Media
+669,Lima,Certificado,2026-05-20,51,65,5,En proceso,1.28,10.2,Baja
+670,Chorrillos,Licencia de Conducir,2026-05-13,25,34,6,En proceso,1.36,4.17,Baja
+671,Lima,Permiso de Funcionamiento,2026-04-05,148,178,1,En proceso,1.2,148,Alta
+672,Comas,Permiso de Funcionamiento,2026-04-13,39,41,5,Pendiente,1.05,7.8,Baja
+673,Puente Piedra,Matrícula,2026-04-01,19,23,5,Pendiente,1.21,3.8,Baja
+674,Chorrillos,Matrícula,2026-05-16,119,161,3,Pendiente,1.35,39.67,Alta
+675,Puente Piedra,DNI / Identidad,2026-05-15,148,141,1,Pendiente,0.95,148,Alta
+676,Puente Piedra,DNI / Identidad,2026-04-03,76,109,3,Pendiente,1.43,25.33,Media
+677,Comas,Matrícula,2026-05-09,22,32,6,Pendiente,1.44,3.67,Baja
+678,Carabayllo,Permiso de Funcionamiento,2026-04-28,73,98,6,Completado,1.34,12.17,Baja
+679,Los Olivos,Matrícula,2026-05-09,56,76,5,Pendiente,1.36,11.2,Baja
+680,Los Olivos,DNI / Identidad,2026-05-12,99,156,6,Completado,1.58,16.5,Media
+681,Los Olivos,Licencia de Conducir,2026-05-07,138,188,6,Pendiente,1.36,23,Media
+682,Ate,DNI / Identidad,2026-04-22,70,88,3,En proceso,1.25,23.33,Media
+683,Ate,Licencia de Conducir,2026-05-20,11,16,5,Completado,1.47,2.2,Baja
+684,Carabayllo,Pasaporte,2026-05-04,78,108,3,Pendiente,1.39,26,Media
+685,Comas,DNI / Identidad,2026-04-19,72,92,3,En proceso,1.28,24,Media
+686,Carabayllo,DNI / Identidad,2026-04-18,130,168,3,En proceso,1.29,43.33,Alta
+687,Santiago de Surco,Matrícula,2026-04-24,99,93,5,Completado,0.94,19.8,Media
+688,Comas,Matrícula,2026-04-13,28,23,3,Pendiente,0.83,9.33,Baja
+689,Chorrillos,DNI / Identidad,2026-04-01,129,116,2,Pendiente,0.9,64.5,Alta
+690,Lima,Matrícula,2026-05-15,70,87,6,En proceso,1.24,11.67,Baja
+691,Puente Piedra,Permiso de Funcionamiento,2026-05-15,146,232,6,Pendiente,1.59,24.33,Media
+692,Chorrillos,Certificado,2026-04-12,44,59,3,Pendiente,1.35,14.67,Baja
+693,Carabayllo,Certificado,2026-05-11,100,119,2,Completado,1.19,50,Alta
+694,Comas,Matrícula,2026-05-08,39,38,6,Pendiente,0.98,6.5,Baja
+695,Puente Piedra,DNI / Identidad,2026-05-14,117,128,2,En proceso,1.09,58.5,Alta
+696,Comas,Permiso de Funcionamiento,2026-04-29,68,76,4,Pendiente,1.12,17,Media
+697,Santiago de Surco,Pasaporte,2026-05-01,120,145,1,En proceso,1.21,120,Alta
+698,Carabayllo,Pasaporte,2026-05-18,150,237,2,Pendiente,1.58,75,Alta
+699,Santiago de Surco,Permiso de Funcionamiento,2026-04-12,119,146,4,En proceso,1.23,29.75,Media
+700,Los Olivos,DNI / Identidad,2026-05-12,146,181,3,Pendiente,1.24,48.67,Alta
+701,Santiago de Surco,Matrícula,2026-04-19,108,98,2,Completado,0.91,54,Alta
+702,Miraflores,Matrícula,2026-04-12,107,162,6,Completado,1.51,17.83,Media
+703,Lima,Pasaporte,2026-04-01,135,193,5,Completado,1.43,27,Media
+704,Lima,Licencia de Conducir,2026-05-02,100,98,5,Pendiente,0.98,20,Media
+705,Miraflores,Licencia de Conducir,2026-05-03,40,47,5,En proceso,1.18,8,Baja
+706,Lima,DNI / Identidad,2026-04-06,137,186,5,Completado,1.36,27.4,Media
+707,Carabayllo,DNI / Identidad,2026-04-20,21,23,1,En proceso,1.1,21,Media
+708,Santiago de Surco,Certificado,2026-04-07,82,104,6,Completado,1.27,13.67,Baja
+709,Chorrillos,Permiso de Funcionamiento,2026-05-08,16,20,5,Completado,1.22,3.2,Baja
+710,Ate,Pasaporte,2026-04-24,106,105,3,Pendiente,0.99,35.33,Alta
+711,Lima,Pasaporte,2026-05-09,19,23,4,En proceso,1.2,4.75,Baja
+712,Los Olivos,Pasaporte,2026-04-07,114,123,1,Pendiente,1.08,114,Alta
+713,Miraflores,Licencia de Conducir,2026-04-18,37,31,3,Pendiente,0.84,12.33,Baja
+714,Chorrillos,DNI / Identidad,2026-05-01,61,60,5,En proceso,0.99,12.2,Baja
+715,Los Olivos,Pasaporte,2026-05-20,58,90,6,Completado,1.56,9.67,Baja
+716,Santiago de Surco,Pasaporte,2026-05-12,99,155,6,Completado,1.57,16.5,Media
+717,Puente Piedra,DNI / Identidad,2026-05-19,43,61,3,Pendiente,1.43,14.33,Baja
+718,Puente Piedra,Matrícula,2026-05-14,63,88,4,En proceso,1.39,15.75,Media
+719,Comas,Permiso de Funcionamiento,2026-05-17,18,16,6,Pendiente,0.89,3,Baja
+720,Puente Piedra,Pasaporte,2026-04-26,128,160,2,Pendiente,1.25,64,Alta
+721,Lima,Matrícula,2026-05-07,107,152,4,En proceso,1.42,26.75,Media
+722,Puente Piedra,Permiso de Funcionamiento,2026-04-28,115,179,3,Completado,1.56,38.33,Alta
+723,Santiago de Surco,Pasaporte,2026-05-19,110,96,5,Pendiente,0.87,22,Media
+724,Los Olivos,Certificado,2026-04-17,25,38,2,En proceso,1.52,12.5,Baja
+725,Chorrillos,Permiso de Funcionamiento,2026-05-09,120,126,2,Completado,1.05,60,Alta
+726,Santiago de Surco,Licencia de Conducir,2026-05-10,84,90,6,Pendiente,1.07,14,Baja
+727,Comas,DNI / Identidad,2026-04-10,38,49,1,Pendiente,1.29,38,Alta
+728,Chorrillos,DNI / Identidad,2026-04-06,132,186,4,Pendiente,1.41,33,Media
+729,Lima,Licencia de Conducir,2026-04-20,40,57,1,En proceso,1.43,40,Alta
+730,Puente Piedra,DNI / Identidad,2026-04-18,56,90,6,En proceso,1.6,9.33,Baja
+731,Ate,Permiso de Funcionamiento,2026-05-04,136,112,3,Completado,0.82,45.33,Alta
+732,Chorrillos,Pasaporte,2026-04-16,88,111,5,Pendiente,1.26,17.6,Media
+733,Los Olivos,Matrícula,2026-05-12,25,34,3,En proceso,1.34,8.33,Baja
+734,Los Olivos,Certificado,2026-04-22,48,55,2,Pendiente,1.14,24,Media
+735,Puente Piedra,Certificado,2026-04-22,82,90,3,Completado,1.1,27.33,Media
+736,Miraflores,Pasaporte,2026-04-27,52,50,5,Pendiente,0.97,10.4,Baja
+737,Carabayllo,Permiso de Funcionamiento,2026-04-04,147,173,2,Completado,1.18,73.5,Alta
+738,Miraflores,Matrícula,2026-05-07,42,55,2,Pendiente,1.3,21,Media
+739,Chorrillos,DNI / Identidad,2026-05-06,25,28,1,Pendiente,1.14,25,Media
+740,Lima,Matrícula,2026-05-01,31,34,1,En proceso,1.09,31,Media
+741,Lima,DNI / Identidad,2026-04-06,69,82,6,En proceso,1.19,11.5,Baja
+742,Comas,Pasaporte,2026-05-17,20,18,3,Completado,0.9,6.67,Baja
+743,Miraflores,Matrícula,2026-05-13,64,58,6,En proceso,0.9,10.67,Baja
+744,Chorrillos,DNI / Identidad,2026-05-19,41,56,3,Pendiente,1.37,13.67,Baja
+745,Chorrillos,Certificado,2026-04-12,13,15,5,Completado,1.13,2.6,Baja
+746,Chorrillos,Licencia de Conducir,2026-05-12,92,133,6,Completado,1.45,15.33,Media
+747,Los Olivos,Certificado,2026-05-07,109,124,6,Completado,1.14,18.17,Media
+748,Santiago de Surco,Certificado,2026-04-08,96,129,2,Pendiente,1.34,48,Alta
+749,Miraflores,DNI / Identidad,2026-04-21,120,132,2,Pendiente,1.1,60,Alta
+750,Chorrillos,DNI / Identidad,2026-04-17,138,206,4,Pendiente,1.49,34.5,Media
+751,Lima,Licencia de Conducir,2026-04-30,49,61,1,Completado,1.24,49,Alta
+752,Ate,Permiso de Funcionamiento,2026-05-18,115,137,3,Pendiente,1.19,38.33,Alta
+753,Chorrillos,Pasaporte,2026-04-08,143,180,5,Completado,1.26,28.6,Media
+754,Puente Piedra,Matrícula,2026-04-14,91,106,5,Pendiente,1.17,18.2,Media
+755,Santiago de Surco,Permiso de Funcionamiento,2026-04-18,133,192,6,En proceso,1.44,22.17,Media
+756,Comas,Matrícula,2026-04-10,56,71,3,Completado,1.26,18.67,Media
+757,Ate,Permiso de Funcionamiento,2026-04-18,52,55,6,Completado,1.06,8.67,Baja
+758,Santiago de Surco,Licencia de Conducir,2026-04-21,130,139,6,Pendiente,1.07,21.67,Media
+759,Chorrillos,Permiso de Funcionamiento,2026-04-11,64,83,4,En proceso,1.3,16,Media
+760,Santiago de Surco,Licencia de Conducir,2026-05-19,148,175,4,En proceso,1.18,37,Alta
+761,Lima,DNI / Identidad,2026-04-08,94,84,1,Pendiente,0.89,94,Alta
+762,Ate,Certificado,2026-05-02,39,45,1,En proceso,1.15,39,Alta
+763,Miraflores,Permiso de Funcionamiento,2026-05-17,59,74,1,En proceso,1.25,59,Alta
+764,Los Olivos,DNI / Identidad,2026-04-16,81,83,2,En proceso,1.03,40.5,Alta
+765,Miraflores,Permiso de Funcionamiento,2026-05-14,31,43,1,Completado,1.39,31,Media
+766,Santiago de Surco,Certificado,2026-04-10,81,116,1,Pendiente,1.43,81,Alta
+767,Comas,Licencia de Conducir,2026-05-17,147,118,6,Pendiente,0.8,24.5,Media
+768,Miraflores,DNI / Identidad,2026-04-23,96,118,3,En proceso,1.23,32,Media
+769,Los Olivos,Permiso de Funcionamiento,2026-05-07,50,62,6,Pendiente,1.25,8.33,Baja
+770,Los Olivos,Certificado,2026-05-18,28,34,5,Completado,1.2,5.6,Baja
+771,Carabayllo,Licencia de Conducir,2026-05-04,93,113,6,Pendiente,1.21,15.5,Media
+772,Ate,Permiso de Funcionamiento,2026-05-15,124,167,4,Completado,1.35,31,Media
+773,Puente Piedra,Matrícula,2026-04-17,56,46,1,Pendiente,0.82,56,Alta
+774,Puente Piedra,Pasaporte,2026-04-30,46,49,5,Completado,1.06,9.2,Baja
+775,Comas,Certificado,2026-04-17,143,214,5,Completado,1.5,28.6,Media
+776,Lima,Pasaporte,2026-05-06,76,107,6,En proceso,1.41,12.67,Baja
+777,Carabayllo,Permiso de Funcionamiento,2026-04-05,144,160,1,Completado,1.11,144,Alta
+778,Los Olivos,DNI / Identidad,2026-04-28,31,35,6,Completado,1.13,5.17,Baja
+779,Los Olivos,Licencia de Conducir,2026-04-11,47,46,5,En proceso,0.98,9.4,Baja
+780,Lima,Licencia de Conducir,2026-04-24,60,69,2,Completado,1.15,30,Media
+781,Carabayllo,Certificado,2026-05-05,138,159,2,Completado,1.15,69,Alta
+782,Ate,Certificado,2026-05-13,25,26,3,Pendiente,1.05,8.33,Baja
+783,Ate,Matrícula,2026-04-11,12,16,4,Completado,1.34,3,Baja
+784,Chorrillos,DNI / Identidad,2026-04-08,81,73,5,En proceso,0.9,16.2,Media
+785,Miraflores,Pasaporte,2026-04-12,16,16,5,En proceso,1.01,3.2,Baja
+786,Lima,Permiso de Funcionamiento,2026-04-16,34,40,4,Pendiente,1.19,8.5,Baja
+787,Ate,Licencia de Conducir,2026-04-02,35,38,2,Completado,1.1,17.5,Media
+788,Carabayllo,Licencia de Conducir,2026-05-12,108,124,3,Completado,1.15,36,Alta
+789,Carabayllo,Permiso de Funcionamiento,2026-05-01,123,111,4,En proceso,0.9,30.75,Media
+790,Lima,Certificado,2026-05-05,145,187,4,En proceso,1.29,36.25,Alta
+791,Chorrillos,Permiso de Funcionamiento,2026-05-17,12,14,2,Completado,1.15,6,Baja
+792,Puente Piedra,Matrícula,2026-05-02,75,116,4,En proceso,1.55,18.75,Media
+793,Carabayllo,Matrícula,2026-04-30,41,52,3,Pendiente,1.26,13.67,Baja
+794,Santiago de Surco,Pasaporte,2026-04-14,101,115,5,Completado,1.14,20.2,Media
+795,Ate,DNI / Identidad,2026-05-19,21,21,2,Pendiente,1.02,10.5,Baja
+796,Lima,Matrícula,2026-05-11,16,24,1,Pendiente,1.48,16,Media
+797,Los Olivos,Certificado,2026-04-10,72,86,2,En proceso,1.2,36,Alta
+798,Lima,Licencia de Conducir,2026-05-16,99,85,4,Completado,0.86,24.75,Media
+799,Santiago de Surco,DNI / Identidad,2026-04-02,124,148,4,En proceso,1.19,31,Media
+800,Ate,Matrícula,2026-05-08,59,73,4,Pendiente,1.24,14.75,Baja
+801,Puente Piedra,DNI / Identidad,2026-04-08,97,112,5,En proceso,1.15,19.4,Media
+802,Miraflores,Matrícula,2026-04-13,109,116,6,En proceso,1.06,18.17,Media
+803,Chorrillos,Matrícula,2026-04-01,149,197,4,Pendiente,1.32,37.25,Alta
+804,Lima,Certificado,2026-04-04,96,122,5,En proceso,1.27,19.2,Media
+805,Santiago de Surco,DNI / Identidad,2026-05-08,113,171,4,Completado,1.51,28.25,Media
+806,Chorrillos,Permiso de Funcionamiento,2026-05-15,16,16,2,Completado,0.99,8,Baja
+807,Miraflores,Permiso de Funcionamiento,2026-04-09,91,123,4,Pendiente,1.35,22.75,Media
+808,Los Olivos,Matrícula,2026-04-16,71,89,4,Completado,1.25,17.75,Media
+809,Lima,Permiso de Funcionamiento,2026-05-03,89,108,6,En proceso,1.21,14.83,Baja
+810,Carabayllo,Permiso de Funcionamiento,2026-05-09,143,144,3,Pendiente,1.01,47.67,Alta
+811,Santiago de Surco,Matrícula,2026-04-18,45,42,4,En proceso,0.94,11.25,Baja
+812,Los Olivos,Licencia de Conducir,2026-04-15,98,108,3,Pendiente,1.1,32.67,Media
+813,Lima,Certificado,2026-04-16,37,58,1,Pendiente,1.57,37,Alta
+814,Puente Piedra,DNI / Identidad,2026-04-19,82,104,4,En proceso,1.27,20.5,Media
+815,Chorrillos,Pasaporte,2026-05-02,76,75,6,Completado,0.99,12.67,Baja
+816,Carabayllo,DNI / Identidad,2026-04-03,110,89,3,Pendiente,0.81,36.67,Alta
+817,Santiago de Surco,Certificado,2026-04-03,135,167,1,Pendiente,1.24,135,Alta
+818,Ate,Certificado,2026-04-26,74,87,3,Pendiente,1.18,24.67,Media
+819,Ate,Permiso de Funcionamiento,2026-05-08,129,123,3,Pendiente,0.95,43,Alta
+820,Miraflores,DNI / Identidad,2026-04-01,130,133,3,Completado,1.02,43.33,Alta
+821,Carabayllo,Licencia de Conducir,2026-05-02,138,141,5,Completado,1.02,27.6,Media
+822,Miraflores,Licencia de Conducir,2026-05-18,125,138,6,Pendiente,1.1,20.83,Media
+823,Chorrillos,Pasaporte,2026-05-03,142,162,6,Pendiente,1.14,23.67,Media
+824,Puente Piedra,Matrícula,2026-05-15,18,15,4,Pendiente,0.82,4.5,Baja
+825,Carabayllo,Licencia de Conducir,2026-04-09,135,162,5,Pendiente,1.2,27,Media
+826,Los Olivos,Pasaporte,2026-04-15,79,81,1,Completado,1.02,79,Alta
+827,Comas,Permiso de Funcionamiento,2026-04-17,78,89,4,Pendiente,1.14,19.5,Media
+828,Lima,Pasaporte,2026-05-07,83,127,1,Pendiente,1.53,83,Alta
+829,Santiago de Surco,Certificado,2026-04-04,16,25,3,Completado,1.56,5.33,Baja
+830,Los Olivos,Certificado,2026-04-24,100,159,2,Completado,1.59,50,Alta
+831,Ate,Permiso de Funcionamiento,2026-05-10,122,188,5,Completado,1.54,24.4,Media
+832,Carabayllo,Permiso de Funcionamiento,2026-04-30,118,139,4,En proceso,1.18,29.5,Media
+833,Santiago de Surco,Certificado,2026-05-06,85,125,6,En proceso,1.47,14.17,Baja
+834,Ate,DNI / Identidad,2026-04-22,121,97,1,Completado,0.8,121,Alta
+835,Miraflores,Permiso de Funcionamiento,2026-05-02,55,72,5,Pendiente,1.31,11,Baja
+836,Puente Piedra,Matrícula,2026-05-11,77,82,1,En proceso,1.06,77,Alta
+837,Los Olivos,Certificado,2026-05-09,80,112,3,Completado,1.4,26.67,Media
+838,Comas,Matrícula,2026-04-29,112,124,3,Completado,1.11,37.33,Alta
+839,Chorrillos,Licencia de Conducir,2026-04-18,97,81,1,En proceso,0.84,97,Alta
+840,Chorrillos,Permiso de Funcionamiento,2026-04-08,36,29,1,Completado,0.81,36,Alta
+841,Comas,Certificado,2026-04-19,40,48,1,En proceso,1.2,40,Alta
+842,Chorrillos,Pasaporte,2026-04-19,59,83,5,Pendiente,1.41,11.8,Baja
+843,Miraflores,Certificado,2026-04-16,51,58,6,En proceso,1.13,8.5,Baja
+844,Comas,Certificado,2026-05-04,52,63,4,Pendiente,1.21,13,Baja
+845,Chorrillos,Licencia de Conducir,2026-05-12,52,57,3,Pendiente,1.09,17.33,Media
+846,Los Olivos,Permiso de Funcionamiento,2026-05-08,91,76,5,Pendiente,0.83,18.2,Media
+847,Miraflores,Pasaporte,2026-04-14,71,110,1,Completado,1.55,71,Alta
+848,Comas,Matrícula,2026-04-09,137,166,3,Pendiente,1.21,45.67,Alta
+849,Chorrillos,DNI / Identidad,2026-04-09,108,97,1,Pendiente,0.9,108,Alta
+850,Ate,Permiso de Funcionamiento,2026-04-25,141,130,4,Pendiente,0.92,35.25,Alta
+851,Santiago de Surco,Permiso de Funcionamiento,2026-05-04,134,131,6,En proceso,0.98,22.33,Media
+852,Santiago de Surco,DNI / Identidad,2026-05-07,112,168,6,En proceso,1.5,18.67,Media
+853,Ate,Matrícula,2026-04-15,52,80,5,Pendiente,1.53,10.4,Baja
+854,Lima,Certificado,2026-05-14,43,39,6,Completado,0.9,7.17,Baja
+855,Lima,Certificado,2026-05-04,20,20,1,Completado,0.99,20,Media
+856,Carabayllo,Pasaporte,2026-05-18,84,112,6,Pendiente,1.33,14,Baja
+857,Carabayllo,Permiso de Funcionamiento,2026-04-30,44,62,6,Pendiente,1.41,7.33,Baja
+858,Los Olivos,Matrícula,2026-04-19,22,23,6,En proceso,1.04,3.67,Baja
+859,Ate,Certificado,2026-05-16,101,129,6,Completado,1.28,16.83,Media
+860,Chorrillos,Matrícula,2026-05-15,131,194,1,Completado,1.48,131,Alta
+861,Chorrillos,Certificado,2026-04-30,105,158,5,Completado,1.5,21,Media
+862,Miraflores,Licencia de Conducir,2026-04-29,76,109,1,Completado,1.43,76,Alta
+863,Santiago de Surco,Matrícula,2026-04-09,83,100,4,Pendiente,1.21,20.75,Media
+864,Lima,Certificado,2026-04-13,21,33,4,En proceso,1.56,5.25,Baja
+865,Los Olivos,Permiso de Funcionamiento,2026-04-18,66,98,2,Completado,1.48,33,Media
+866,Santiago de Surco,Matrícula,2026-05-14,129,178,5,En proceso,1.38,25.8,Media
+867,Santiago de Surco,DNI / Identidad,2026-05-03,85,105,2,Pendiente,1.23,42.5,Alta
+868,Miraflores,Permiso de Funcionamiento,2026-05-16,53,52,6,Completado,0.98,8.83,Baja
+869,Comas,Certificado,2026-04-24,89,103,5,En proceso,1.16,17.8,Media
+870,Ate,Licencia de Conducir,2026-05-05,144,161,3,Completado,1.12,48,Alta
+871,Lima,Permiso de Funcionamiento,2026-04-06,41,60,3,Pendiente,1.47,13.67,Baja
+872,Carabayllo,Certificado,2026-04-11,19,16,6,Completado,0.85,3.17,Baja
+873,Carabayllo,Pasaporte,2026-05-13,40,55,6,En proceso,1.37,6.67,Baja
+874,Los Olivos,Permiso de Funcionamiento,2026-04-30,148,229,2,Pendiente,1.55,74,Alta
+875,Lima,Permiso de Funcionamiento,2026-04-26,43,52,4,Completado,1.21,10.75,Baja
+876,Miraflores,Certificado,2026-05-16,19,15,5,Pendiente,0.81,3.8,Baja
+877,Miraflores,Pasaporte,2026-04-28,77,92,5,En proceso,1.19,15.4,Media
+878,Chorrillos,Permiso de Funcionamiento,2026-04-30,22,32,5,En proceso,1.46,4.4,Baja
+879,Lima,DNI / Identidad,2026-05-06,15,18,3,En proceso,1.21,5,Baja
+880,Carabayllo,DNI / Identidad,2026-05-18,72,68,3,Pendiente,0.95,24,Media
+881,Miraflores,Permiso de Funcionamiento,2026-04-26,37,46,4,En proceso,1.25,9.25,Baja
+882,Carabayllo,Certificado,2026-04-05,46,69,2,Completado,1.51,23,Media
+883,Carabayllo,Matrícula,2026-04-15,26,29,5,Pendiente,1.11,5.2,Baja
+884,Santiago de Surco,Matrícula,2026-05-04,130,156,1,En proceso,1.2,130,Alta
+885,Puente Piedra,Certificado,2026-05-13,20,27,6,Completado,1.37,3.33,Baja
+886,Santiago de Surco,Certificado,2026-04-11,50,40,6,En proceso,0.81,8.33,Baja
+887,Carabayllo,Pasaporte,2026-04-05,104,134,5,Completado,1.29,20.8,Media
+888,Carabayllo,Permiso de Funcionamiento,2026-04-02,10,15,1,Completado,1.53,10,Baja
+889,Comas,Permiso de Funcionamiento,2026-04-15,55,68,2,Completado,1.23,27.5,Media
+890,Santiago de Surco,DNI / Identidad,2026-05-05,115,93,1,En proceso,0.81,115,Alta
+891,Chorrillos,Matrícula,2026-05-06,108,102,1,Completado,0.94,108,Alta
+892,Carabayllo,Licencia de Conducir,2026-05-06,11,13,4,Pendiente,1.17,2.75,Baja
+893,Ate,DNI / Identidad,2026-04-04,60,67,5,En proceso,1.12,12,Baja
+894,Comas,Matrícula,2026-05-11,83,79,2,Completado,0.95,41.5,Alta
+895,Lima,Certificado,2026-04-07,138,219,4,Completado,1.59,34.5,Media
+896,Los Olivos,DNI / Identidad,2026-04-30,141,183,3,Pendiente,1.3,47,Alta
+897,Santiago de Surco,Licencia de Conducir,2026-05-20,39,40,3,En proceso,1.02,13,Baja
+898,Comas,Permiso de Funcionamiento,2026-05-14,91,126,2,En proceso,1.39,45.5,Alta
+899,Chorrillos,Matrícula,2026-05-15,113,107,2,Pendiente,0.95,56.5,Alta
+900,Chorrillos,DNI / Identidad,2026-04-20,128,137,2,En proceso,1.07,64,Alta
+901,Puente Piedra,Pasaporte,2026-04-08,12,17,1,Completado,1.38,12,Baja
+902,Lima,Permiso de Funcionamiento,2026-05-12,125,131,2,Completado,1.05,62.5,Alta
+903,Carabayllo,Certificado,2026-04-04,119,114,4,Pendiente,0.96,29.75,Media
+904,Carabayllo,Licencia de Conducir,2026-04-10,126,159,5,En proceso,1.26,25.2,Media
+905,Chorrillos,Pasaporte,2026-04-18,105,139,3,En proceso,1.32,35,Media
+906,Los Olivos,Pasaporte,2026-04-22,146,164,2,Completado,1.12,73,Alta
+907,Puente Piedra,Matrícula,2026-04-30,47,64,5,En proceso,1.37,9.4,Baja
+908,Miraflores,Matrícula,2026-04-26,77,92,4,Completado,1.19,19.25,Media
+909,Santiago de Surco,Matrícula,2026-05-18,56,63,3,Pendiente,1.12,18.67,Media
+910,Puente Piedra,Pasaporte,2026-04-08,64,71,1,Completado,1.11,64,Alta
+911,Miraflores,Licencia de Conducir,2026-04-05,90,123,3,Completado,1.37,30,Media
+912,Puente Piedra,DNI / Identidad,2026-05-07,89,127,4,En proceso,1.43,22.25,Media
+913,Carabayllo,Permiso de Funcionamiento,2026-05-02,108,153,6,Completado,1.42,18,Media
+914,Lima,Permiso de Funcionamiento,2026-04-01,39,33,1,En proceso,0.85,39,Alta
+915,Carabayllo,Licencia de Conducir,2026-04-22,50,79,1,En proceso,1.58,50,Alta
+916,Ate,DNI / Identidad,2026-05-09,110,129,1,Pendiente,1.17,110,Alta
+917,Puente Piedra,Matrícula,2026-04-12,69,91,5,Completado,1.32,13.8,Baja
+918,Puente Piedra,Permiso de Funcionamiento,2026-05-14,101,118,1,Pendiente,1.17,101,Alta
+919,Miraflores,DNI / Identidad,2026-04-29,30,35,6,Pendiente,1.17,5,Baja
+920,Lima,Licencia de Conducir,2026-05-01,143,183,3,Pendiente,1.28,47.67,Alta
+921,Los Olivos,Matrícula,2026-04-02,98,115,3,Pendiente,1.17,32.67,Media
+922,Miraflores,Matrícula,2026-04-02,136,118,3,En proceso,0.87,45.33,Alta
+923,Los Olivos,DNI / Identidad,2026-04-08,108,157,2,En proceso,1.45,54,Alta
+924,Santiago de Surco,DNI / Identidad,2026-05-19,85,122,4,En proceso,1.43,21.25,Media
+925,Miraflores,Licencia de Conducir,2026-04-29,18,15,6,Pendiente,0.82,3,Baja
+926,Chorrillos,Licencia de Conducir,2026-04-09,91,137,2,Completado,1.51,45.5,Alta
+927,Santiago de Surco,Matrícula,2026-05-17,71,84,2,Pendiente,1.19,35.5,Alta
+928,Comas,Matrícula,2026-04-10,100,127,6,En proceso,1.27,16.67,Media
+929,Santiago de Surco,Pasaporte,2026-05-12,90,76,4,En proceso,0.84,22.5,Media
+930,Los Olivos,Permiso de Funcionamiento,2026-05-12,68,95,4,Completado,1.4,17,Media
+931,Ate,DNI / Identidad,2026-04-19,112,93,3,Completado,0.83,37.33,Alta
+932,Comas,Matrícula,2026-05-13,65,98,6,Pendiente,1.5,10.83,Baja
+933,Ate,Certificado,2026-04-15,41,35,6,En proceso,0.85,6.83,Baja
+934,Puente Piedra,Certificado,2026-04-01,104,159,3,En proceso,1.53,34.67,Media
+935,Puente Piedra,Permiso de Funcionamiento,2026-05-12,16,23,5,En proceso,1.41,3.2,Baja
+936,Santiago de Surco,Licencia de Conducir,2026-05-17,109,160,5,Completado,1.47,21.8,Media
+937,Carabayllo,Licencia de Conducir,2026-04-19,19,21,4,En proceso,1.09,4.75,Baja
+938,Santiago de Surco,Permiso de Funcionamiento,2026-04-05,101,158,3,Completado,1.56,33.67,Media
+939,Ate,Permiso de Funcionamiento,2026-04-07,19,28,5,Completado,1.48,3.8,Baja
+940,Carabayllo,Permiso de Funcionamiento,2026-04-14,59,92,3,En proceso,1.56,19.67,Media
+941,Lima,DNI / Identidad,2026-04-29,86,135,6,Pendiente,1.57,14.33,Baja
+942,Lima,Certificado,2026-04-22,147,123,6,Completado,0.84,24.5,Media
+943,Santiago de Surco,DNI / Identidad,2026-05-15,137,144,2,Completado,1.05,68.5,Alta
+944,Carabayllo,Licencia de Conducir,2026-05-07,26,30,5,En proceso,1.16,5.2,Baja
+945,Ate,Matrícula,2026-04-11,143,142,1,Completado,0.99,143,Alta
+946,Santiago de Surco,Pasaporte,2026-04-21,90,123,5,Pendiente,1.37,18,Media
+947,Santiago de Surco,Certificado,2026-04-25,90,130,2,Pendiente,1.45,45,Alta
+948,Chorrillos,Permiso de Funcionamiento,2026-04-12,140,197,1,En proceso,1.41,140,Alta
+949,Los Olivos,Certificado,2026-05-02,120,180,4,Completado,1.5,30,Media
+950,Comas,DNI / Identidad,2026-05-06,86,117,5,Completado,1.36,17.2,Media
+951,Chorrillos,Permiso de Funcionamiento,2026-04-29,149,197,5,En proceso,1.32,29.8,Media
+952,Miraflores,Licencia de Conducir,2026-05-12,88,120,3,En proceso,1.36,29.33,Media
+953,Lima,Licencia de Conducir,2026-04-01,70,86,2,En proceso,1.23,35,Media
+954,Los Olivos,Matrícula,2026-05-14,130,190,1,En proceso,1.46,130,Alta
+955,Puente Piedra,Pasaporte,2026-04-24,59,54,1,En proceso,0.92,59,Alta
+956,Carabayllo,Licencia de Conducir,2026-04-01,103,108,5,En proceso,1.05,20.6,Media
+957,Los Olivos,Permiso de Funcionamiento,2026-05-14,15,21,3,Completado,1.42,5,Baja
+958,Lima,Matrícula,2026-04-28,120,116,2,Completado,0.97,60,Alta
+959,Santiago de Surco,Licencia de Conducir,2026-04-04,52,49,3,Pendiente,0.94,17.33,Media
+960,Ate,Certificado,2026-05-11,92,109,3,Completado,1.18,30.67,Media
+961,Los Olivos,Pasaporte,2026-05-07,64,78,3,Pendiente,1.22,21.33,Media
+962,Puente Piedra,Certificado,2026-04-15,25,34,5,Completado,1.38,5,Baja
+963,Puente Piedra,Pasaporte,2026-05-01,84,118,4,En proceso,1.4,21,Media
+964,Lima,Permiso de Funcionamiento,2026-04-14,46,50,5,Completado,1.09,9.2,Baja
+965,Santiago de Surco,Pasaporte,2026-04-12,84,104,4,Pendiente,1.24,21,Media
+966,Los Olivos,Matrícula,2026-05-11,112,128,3,En proceso,1.14,37.33,Alta
+967,Miraflores,Permiso de Funcionamiento,2026-05-10,42,36,5,Completado,0.85,8.4,Baja
+968,Comas,Certificado,2026-04-23,132,132,5,Completado,1,26.4,Media
+969,Ate,Certificado,2026-04-25,120,172,4,Pendiente,1.43,30,Media
+970,Lima,Certificado,2026-05-14,86,115,1,Pendiente,1.34,86,Alta
+971,Carabayllo,Licencia de Conducir,2026-04-18,81,111,2,En proceso,1.37,40.5,Alta
+972,Chorrillos,Certificado,2026-05-19,26,36,6,En proceso,1.39,4.33,Baja
+973,Puente Piedra,Certificado,2026-05-12,149,150,1,Pendiente,1.01,149,Alta
+974,Miraflores,Matrícula,2026-04-13,101,84,4,Pendiente,0.83,25.25,Media
+975,Santiago de Surco,Matrícula,2026-04-20,140,221,5,Pendiente,1.58,28,Media
+976,Miraflores,Matrícula,2026-04-14,89,104,6,En proceso,1.17,14.83,Baja
+977,Los Olivos,Matrícula,2026-05-08,133,137,4,Completado,1.03,33.25,Media
+978,Puente Piedra,Certificado,2026-05-13,106,146,1,Completado,1.38,106,Alta
+979,Los Olivos,Licencia de Conducir,2026-04-02,124,129,3,En proceso,1.04,41.33,Alta
+980,Ate,Pasaporte,2026-04-06,22,27,5,En proceso,1.22,4.4,Baja
+981,Comas,Pasaporte,2026-04-08,64,77,1,Pendiente,1.2,64,Alta
+982,Comas,Certificado,2026-05-17,70,74,6,En proceso,1.06,11.67,Baja
+983,Carabayllo,DNI / Identidad,2026-04-16,119,95,6,En proceso,0.8,19.83,Media
+984,Comas,DNI / Identidad,2026-05-11,101,112,5,En proceso,1.11,20.2,Media
+985,Los Olivos,DNI / Identidad,2026-04-25,100,156,1,Pendiente,1.56,100,Alta
+986,Lima,Matrícula,2026-04-29,142,204,1,Completado,1.44,142,Alta
+987,Lima,Matrícula,2026-04-02,105,109,2,Completado,1.04,52.5,Alta
+988,Comas,Pasaporte,2026-04-09,31,33,3,En proceso,1.06,10.33,Baja
+989,Puente Piedra,DNI / Identidad,2026-04-27,131,156,4,Completado,1.19,32.75,Media
+990,Los Olivos,Certificado,2026-04-18,43,39,6,En proceso,0.9,7.17,Baja
+991,Ate,Licencia de Conducir,2026-05-17,41,36,1,Completado,0.87,41,Alta
+992,Ate,Certificado,2026-04-22,54,70,1,En proceso,1.3,54,Alta
+993,Los Olivos,Certificado,2026-04-29,98,146,3,Completado,1.49,32.67,Media
+994,Puente Piedra,DNI / Identidad,2026-04-12,144,154,5,En proceso,1.07,28.8,Media
+995,Comas,Matrícula,2026-04-27,107,142,2,En proceso,1.33,53.5,Alta
+996,Comas,Licencia de Conducir,2026-04-14,115,144,3,Completado,1.25,38.33,Alta
+997,Carabayllo,Matrícula,2026-04-06,85,77,4,En proceso,0.91,21.25,Media
+998,Ate,Pasaporte,2026-04-15,136,146,5,Pendiente,1.07,27.2,Media
+999,Chorrillos,Permiso de Funcionamiento,2026-04-08,85,96,4,En proceso,1.13,21.25,Media
+1000,Miraflores,DNI / Identidad,2026-05-16,42,59,4,Completado,1.4,10.5,Baja
+1001,Puente Piedra,Certificado,2026-04-20,91,113,3,Pendiente,1.24,30.33,Media

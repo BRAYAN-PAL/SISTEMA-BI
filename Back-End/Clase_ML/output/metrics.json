@@ -1,0 +1,20 @@
+{
+  "accuracy": 99.5,
+  "bestDepth": 3,
+  "status": "CUMPLE >= 90%",
+  "rows": 1001,
+  "features": [
+    "tipo_tramite",
+    "distrito",
+    "personas_cola",
+    "tiempo_espera_min",
+    "ventanillas",
+    "promedio_atencion",
+    "personas_por_ventanilla"
+  ],
+  "classes": [
+    "Alta",
+    "Baja",
+    "Media"
+  ]
+}

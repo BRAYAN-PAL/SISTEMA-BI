@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Staging Area</title>
+    <link rel="stylesheet" href="../css/staging.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="sidebar__brand">
+          <div class="brand__icon">DE</div>
+          <div>
+            <div class="brand__name">Data Engine</div>
+            <div class="brand__status">Instancia activa</div>
+          </div>
+        </div>
+        <div class="sidebar__nav">
+          <button class="nav__icon">⚙</button>
+          <span>Settings</span>
+        </div>
+      </aside>
+
+      <main class="main">
+        <section class="stepper">
+          <a class="step step--done" href="proceso.html">1</a>
+          <a class="step step--active" href="staging.html">2</a>
+          <a class="step" href="etl.html">3</a>
+          <a class="step" href="data-warehouse.html">4</a>
+          <a class="step" href="capa-ia.html">5</a>
+          <a class="step" href="capa-semantica.html">6</a>
+        </section>
+        <div class="stepper__labels">
+          <span>Fuente de Datos</span>
+          <span class="label--active">Staging Area</span>
+          <span>Proceso ETL</span>
+          <span>Data Warehouse</span>
+          <span>Capa IA</span>
+          <span>Capa Semantica</span>
+        </div>
+
+        <section class="header">
+          <div>
+            <h1>Staging Area</h1>
+            <p>
+              Modulo 2: Orquestacion de validacion de datos y alineamiento de
+              esquemas antes de la inyeccion al warehouse.
+            </p>
+          </div>
+        </section>
+
+        <section class="metrics">
+          <article class="metric metric--blue">
+            <div class="metric__title">Campos validados</div>
+            <div class="metric__value" id="metricColumns">0 <span>columnas</span></div>
+            <div class="metric__text">Columnas detectadas en el dataset.</div>
+          </article>
+          <article class="metric metric--green">
+            <div class="metric__title">Cantidad de datos</div>
+            <div class="metric__value" id="metricRows">0 <span>filas</span></div>
+            <div class="metric__text">Registros totales procesados.</div>
+          </article>
+          <article class="metric metric--purple">
+            <div class="metric__title">Validacion de datos</div>
+            <div class="metric__value" id="metricScore">0% <span>En espera</span></div>
+            <div class="metric__text">Calidad y consistencia del dataset.</div>
+          </article>
+        </section>
+
+        <section class="content">
+          <div class="table-card">
+            <div class="table-card__header">
+              <h3>Vista de validacion</h3>
+              <div class="table-card__actions">
+                <button class="btn btn--ghost" id="exportBtn">Exportar</button>
+                <button class="btn btn--primary" id="revalidateBtn">Revalidar</button>
+              </div>
+            </div>
+            <div class="table-tabs" id="stagingTabs"></div>
+            <div class="table" id="validationTable">
+              <div class="table__row table__row--head"></div>
+            </div>
+            <div class="table-card__footer">
+              <span id="tableFooter">Mostrando 0 de 0 registros</span>
+            </div>
+            <div class="table-card__loading" id="tableLoading">
+              Validando datos...
+            </div>
+          </div>
+
+          <aside class="status">
+            <h3>Estado de ingesta</h3>
+            <div class="status__item status__item--ok">
+              <div class="status__dot">✓</div>
+              <div>
+                <strong>Fuente correcta</strong>
+                <p>Integridad validada en staging.</p>
+              </div>
+            </div>
+            <div class="status__item status__item--active">
+              <div class="status__dot">↻</div>
+              <div>
+                <strong>Subiendo datos</strong>
+                <p>Procesando lotes en tiempo real.</p>
+              </div>
+            </div>
+            <div class="status__item">
+              <div class="status__dot">•</div>
+              <div>
+                <strong>Extraccion de esquema</strong>
+                <p>Pendiente de confirmacion final.</p>
+              </div>
+            </div>
+
+            <div class="status__actions">
+              <a class="btn btn--ghost" href="proceso.html">← Anterior</a>
+              <a class="btn btn--primary" href="etl.html">Siguiente →</a>
+              <button class="btn btn--ghost">Guardar borrador y salir</button>
+            </div>
+          </aside>
+        </section>
+      </main>
+    </div>
+
+    <script src="../js/staging.js"></script>
+  </body>
+</html>
+
+

@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capa IA - Data Engine</title>
+    <link rel="stylesheet" href="../css/capa-ia.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="sidebar__brand">
+          <div class="brand__icon">DE</div>
+          <div>
+            <div class="brand__name">Data Engine</div>
+            <div class="brand__status">Instancia activa</div>
+          </div>
+        </div>
+        <div class="sidebar__nav">
+          <button class="nav__icon">⚙</button>
+          <span>Settings</span>
+        </div>
+      </aside>
+
+      <main class="main">
+        <section class="stepper">
+          <a class="step step--done" href="proceso.html">1</a>
+          <a class="step step--done" href="staging.html">2</a>
+          <a class="step step--done" href="etl.html">3</a>
+          <a class="step step--done" href="data-warehouse.html">4</a>
+          <a class="step step--active" href="capa-ia.html">5</a>
+          <a class="step" href="capa-semantica.html">6</a>
+        </section>
+        <div class="stepper__labels">
+          <span>Fuente de Datos</span>
+          <span>Staging Area</span>
+          <span>Proceso ETL</span>
+          <span>Data Warehouse</span>
+          <span class="label--active">Capa IA</span>
+          <span>Capa Semantica</span>
+        </div>
+
+        <section class="header">
+          <div>
+            <h1>Machine Learning</h1>
+            <p>
+              Análisis predictivo y orquestación automatizada de modelos con
+              observabilidad en tiempo real.
+            </p>
+          </div>
+        </section>
+
+        <section class="metrics">
+          <article class="metric metric--orange">
+            <div class="metric__title">AI Accuracy</div>
+            <div class="metric__value" id="aiAccuracy">-</div>
+            <div class="metric__hint">Precisión del modelo</div>
+          </article>
+          <article class="metric metric--blue">
+            <div class="metric__title">Profundidad del árbol</div>
+            <div class="metric__value" id="aiDepth">-</div>
+            <div class="metric__hint">Capas máximas</div>
+          </article>
+          <article class="metric metric--purple">
+            <div class="metric__title">Filas usadas</div>
+            <div class="metric__value" id="aiRows">-</div>
+            <div class="metric__hint">Dataset total</div>
+          </article>
+          <article class="metric metric--green">
+            <div class="metric__title">Estado del modelo</div>
+            <div class="metric__value" id="aiStatus">-</div>
+            <div class="metric__hint">Meta >= 90%</div>
+          </article>
+        </section>
+
+        <section class="grid">
+          <div class="card card--chart">
+            <div class="card__header">
+              <span>Árbol de Decisión</span>
+              <span class="card__badge">Live</span>
+            </div>
+            <div class="chart">
+              <img
+                class="chart__image"
+                id="iaTreeImage"
+                alt="Árbol de decisión"
+              />
+              <div class="chart__placeholder" id="iaTreePlaceholder">
+                Sin datos aún
+              </div>
+            </div>
+          </div>
+
+          <div class="card card--chart">
+            <div class="card__header">
+              <span>Matriz de Confusión</span>
+              <span class="card__badge">Insights</span>
+            </div>
+            <div class="chart">
+              <img
+                class="chart__image"
+                id="iaMatrixImage"
+                alt="Matriz de confusión"
+              />
+              <div class="chart__placeholder" id="iaMatrixPlaceholder">
+                Sin datos aún
+              </div>
+            </div>
+          </div>
+
+          <div class="card card--console">
+            <div class="card__header">
+              <span>Python ML Engine</span>
+              <span class="card__badge">Running</span>
+            </div>
+            <div class="console" id="iaConsole">Esperando ejecución...</div>
+            <div class="card__actions">
+              <button class="btn btn--ghost" id="runIa">
+                Ejecutar análisis IA
+              </button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__header">
+              <span>Distribución por entidad</span>
+              <span class="card__badge">AutoML</span>
+            </div>
+            <div class="chart">
+              <img
+                class="chart__image"
+                id="iaDistribImage"
+                alt="Distribución de congestión"
+              />
+              <div class="chart__placeholder" id="iaDistribPlaceholder">
+                Sin datos aún
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="actions">
+          <a class="btn btn--ghost" href="data-warehouse.html">← Anterior</a>
+          <button class="btn btn--ghost" id="clearData">Borrar datos</button>
+          <a class="btn btn--primary" href="capa-semantica.html">Siguiente →</a>
+        </section>
+      </main>
+    </div>
+
+    <script src="../js/capa-ia.js"></script>
+  </body>
+</html>

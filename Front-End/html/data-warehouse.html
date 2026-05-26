@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Warehouse Modeling</title>
+    <link rel="stylesheet" href="../css/data-warehouse.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="sidebar__brand">
+          <div class="brand__icon">DE</div>
+          <div>
+            <div class="brand__name">Data Engine</div>
+            <div class="brand__status">Instancia activa</div>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <section class="stepper">
+          <a class="step step--done" href="proceso.html">1</a>
+          <a class="step step--done" href="staging.html">2</a>
+          <a class="step step--done" href="etl.html">3</a>
+          <a class="step step--active" href="data-warehouse.html">4</a>
+          <a class="step" href="capa-ia.html">5</a>
+          <a class="step" href="capa-semantica.html">6</a>
+        </section>
+        <div class="stepper__labels">
+          <span>Fuente de Datos</span>
+          <span>Staging Area</span>
+          <span>Proceso ETL</span>
+          <span class="label--active">Data Warehouse</span>
+          <span>Capa IA</span>
+          <span>Capa Semantica</span>
+        </div>
+
+        <section class="header">
+          <div>
+            <h1>Data Warehouse Modeling</h1>
+            <p>
+              Simulacion del esquema tipo copo de nieve con entidades de
+              dimension y una tabla de hechos central.
+            </p>
+          </div>
+        </section>
+
+        <section class="canvas">
+          <div class="schema">
+            <article class="card card--dim" id="dimTime">
+              <div class="card__title">DimTiempo</div>
+              <ul>
+                <li>TiempoID</li>
+                <li>Fecha</li>
+                <li>Mes</li>
+                <li>Trimestre</li>
+                <li>Anio</li>
+              </ul>
+            </article>
+
+            <article class="card card--fact" id="factTrips">
+              <div class="card__title">FactViajes</div>
+              <ul>
+                <li>ViajeID</li>
+                <li>TiempoID (FK)</li>
+                <li>RutaID (FK)</li>
+                <li>EstacionID (FK)</li>
+                <li>MontoTotal</li>
+                <li>Pasajeros</li>
+              </ul>
+            </article>
+
+            <article class="card card--dim" id="dimRoute">
+              <div class="card__title">DimRuta</div>
+              <ul>
+                <li>RutaID</li>
+                <li>NombreRuta</li>
+                <li>Kilometros</li>
+                <li>Zona</li>
+              </ul>
+            </article>
+
+            <article class="card card--dim" id="dimStation">
+              <div class="card__title">DimEstacion</div>
+              <ul>
+                <li>EstacionID</li>
+                <li>Nombre</li>
+                <li>Capacidad</li>
+                <li>Ubicacion</li>
+              </ul>
+            </article>
+
+            <div class="link link--left"></div>
+            <div class="link link--right"></div>
+            <div class="link link--bottom"></div>
+          </div>
+
+          <div class="canvas__footer">
+            <button class="btn btn--ghost">History</button>
+            <button class="btn btn--ghost">Export SQL</button>
+            <div class="canvas__tags">
+              <span class="pill">Auto-Layout Activo</span>
+              <span class="pill pill--primary">Snowflake Schema</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="actions">
+          <a class="btn btn--ghost" href="etl.html">← Anterior</a>
+          <button class="btn btn--ghost" id="clearData">Borrar datos</button>
+          <a class="btn btn--primary" href="capa-ia.html">Siguiente →</a>
+        </section>
+      </main>
+    </div>
+
+    <script src="../js/data-warehouse.js"></script>
+  </body>
+</html>
+
+

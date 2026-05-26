@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fuente de Datos</title>
+    <link rel="stylesheet" href="../css/proceso.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="sidebar__brand">
+          <div class="brand__icon">DE</div>
+          <div>
+            <div class="brand__name">Data Engine</div>
+            <div class="brand__status">Instancia activa</div>
+          </div>
+        </div>
+        <div class="sidebar__progress">
+          <div class="progress__ring" id="progressRing">
+            <div class="progress__value" id="progressValue">0%</div>
+          </div>
+          <div class="progress__label" id="progressLabel">En espera</div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <section class="stepper">
+          <a class="step step--active" href="proceso.html">1</a>
+          <a class="step" href="staging.html">2</a>
+          <a class="step" href="etl.html">3</a>
+          <a class="step" href="data-warehouse.html">4</a>
+          <a class="step" href="capa-ia.html">5</a>
+          <a class="step" href="capa-semantica.html">6</a>
+        </section>
+        <div class="stepper__labels">
+          <span class="label label--active">Fuente de Datos</span>
+          <span>Staging Area</span>
+          <span>Proceso ETL</span>
+          <span>Data Warehouse</span>
+          <span>Capa IA</span>
+          <span>Capa Semantica</span>
+        </div>
+
+        <section class="header">
+          <div>
+            <h1>Fuente de Datos</h1>
+            <p>
+              Configura parametros de ingesta y sube datasets sin procesar para
+              el flujo de trabajo.
+            </p>
+          </div>
+          <div class="upload-progress">
+            <span>Progreso de carga:</span>
+            <div class="bar">
+              <div class="bar__fill" id="headerBar"></div>
+            </div>
+            <strong id="headerPercent">0%</strong>
+          </div>
+        </section>
+
+        <section class="content">
+          <div class="upload">
+            <div class="upload__drop" id="dropZone">
+              <div class="upload__icon">☁</div>
+              <h3>Arrastra y suelta tu dataset aqui</h3>
+              <p>
+                Soporte para archivos empresariales. Tamano maximo: 5GB por
+                sesion.
+              </p>
+              <div class="upload__types">
+                <span>CSV</span>
+                <span>Excel</span>
+                <span>SQL Dump</span>
+                <span>JSON / Avro</span>
+              </div>
+              <label class="btn btn--primary">
+                <input
+                  type="file"
+                  id="fileInput"
+                  accept=".csv,.xls,.xlsx,.json,.avro,.sql"
+                  multiple
+                />
+                Buscar archivos locales
+              </label>
+            </div>
+
+            <div class="preview">
+              <div class="preview__header">
+                <div class="preview__title">
+                  <span class="eye">👁</span>
+                  Vista previa (10 filas)
+                </div>
+                <span class="preview__status" id="fileTag">Carga activa: q4_sales_report.csv</span>
+              </div>
+              <div class="preview__tabs" id="previewTabs"></div>
+              <div class="preview__table" id="previewTable"></div>
+            </div>
+          </div>
+
+          <aside class="status">
+            <h3>Estado de ingesta</h3>
+            <div class="status__item status__item--ok" id="statusSource">
+              <div class="status__dot">✓</div>
+              <div>
+                <strong>Fuente conectada</strong>
+                <p>Handshake exitoso con almacenamiento Azure Blob.</p>
+              </div>
+            </div>
+            <div class="status__item status__item--active" id="statusUpload">
+              <div class="status__dot">↻</div>
+              <div>
+                <strong>Subiendo datos</strong>
+                <p id="statusUploadText">Esperando archivo para iniciar.</p>
+              </div>
+            </div>
+            <div class="status__item" id="statusSchema">
+              <div class="status__dot">•</div>
+              <div>
+                <strong>Extraccion de esquema</strong>
+                <p id="statusSchemaText">Pendiente de la carga completa.</p>
+              </div>
+            </div>
+
+            <div class="status__actions">
+              <a class="btn btn--ghost" href="index.html">← Anterior</a>
+              <a class="btn btn--primary" href="staging.html">Siguiente →</a>
+              <button class="btn btn--ghost" id="clearData">Borrar datos</button>
+              <button class="btn btn--ghost">Guardar borrador y salir</button>
+            </div>
+          </aside>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <script src="../js/proceso.js"></script>
+  </body>
+</html>
+
+
