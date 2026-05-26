@@ -32,6 +32,14 @@ if (!fs.existsSync(ML_OUTPUT_DIR)) {
 app.use("/graficos", express.static(ML_OUTPUT_DIR));
 app.use(express.static(path.join(__dirname, "../Front-End")));
 
+app.get("/", (req, res) => {
+  res.redirect("/html/index.html");
+});
+
+app.get("/html/index.html", (req, res) => {
+  res.sendFile(path.join(__dirname, "../Front-End/html/index.html"));
+});
+
 const dbConfig = {
   user: "sa",
   password: "123456",
