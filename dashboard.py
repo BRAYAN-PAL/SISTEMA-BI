@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import psycopg  # Usando psycopg v3 para evitar errores de compilación
+import psycopg2
 import os
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -15,56 +15,58 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Estilos personalizados para mejorar la apariencia de las tarjetas
-st.markdown("""
-    <style>
-    .metric-container {
-        background-color: #f0f2f6;
-        padding: 15px;
-        border-radius: 10px;
-        box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
-    }
-    </style>
-""", unsafe_allow_html=True)
-
 # ==========================================
-# CONEXIÓN DIRECTA A NEON POSTGRESQL
+# CONEXIÓN A NEON POSTGRESQL
 # ==========================================
-NEON_CONN = "postgresql://neondb_owner:npg_lZjfe4O6HUPW@ep-restless-brook-ai7pp00g.c-4.us-east-1.aws.neon.tech/neondb?sslmode=require"
+# Usa variable de entorno o la URL directa de Neon
+NEON_CONN = os.getenv(
+    "DATABASE_URL",
+    "postgresql://neondb_owner:npg_lZjfe4O6HUPW@ep-restless-brook-ai7pp00g.c-4.us-east-1.aws.neon.tech/neondb?sslmode=require"
+)
 
-@st.cache_data(ttl=60)  # Mantiene caché por 60 segundos para optimizar rendimiento
+@st.cache_data(ttl=60)
 def cargar_datos_kpis():
     """Obtiene los últimos KPIs calculados desde el Data Warehouse"""
-    with psycopg.connect(NEON_CONN) as conn:
-        query = """
-            SELECT nombrekpi, valor, meta, fechacalculo 
-            FROM factkpis 
-            ORDER BY fechacalculo DESC 
-            LIMIT 3;
-        """
-        with conn.cursor() as cur:
-            cur.execute(query)
-            columnas = [desc[0] for desc in cur.description]
-            datos = cur.fetchall()
-            df = pd.DataFrame(datos, columns=columnas)
+    conn = psycopg2.connect(NEON_CONN)
+    query = """
+        SELECT nombrekpi, valor, meta, fechacalculo
+        FROM factkpis
+        ORDER BY fechacalculo DESC
+        LIMIT 3;
+    """
+    df = pd.read_sql(query, conn)
+    conn.close()
     return df
 
 @st.cache_data(ttl=60)
 def cargar_datos_productividad():
-    """Obtiene el consolidado de trámites por distrito para la analítica"""
-    with psycopg.connect(NEON_CONN) as conn:
-        query = """
-            SELECT dg.distrito AS distrito, COUNT(*) AS tramitesatendidos
-            FROM fact_tramites ft
-            JOIN dim_geografia dg ON ft.id_distrito = dg.id_distrito
-            GROUP BY dg.distrito
-            ORDER BY tramitesatendidos DESC;
-        """
-        with conn.cursor() as cur:
-            cur.execute(query)
-            columnas = [desc[0] for desc in cur.description]
-            datos = cur.fetchall()
-            df = pd.DataFrame(datos, columns=columnas)
+    """Obtiene el consolidado de trámites por distrito"""
+    conn = psycopg2.connect(NEON_CONN)
+    query = """
+        SELECT dg.distrito AS distrito, COUNT(*) AS tramitesatendidos,
+               AVG(ft.tiempo_espera_min) AS tiempopromedio
+        FROM fact_tramites ft
+        JOIN dim_geografia dg ON ft.id_distrito = dg.id_distrito
+        GROUP BY dg.distrito
+        ORDER BY tramitesatendidos DESC;
+    """
+    df = pd.read_sql(query, conn)
+    conn.close()
+    return df
+
+@st.cache_data(ttl=60)
+def cargar_datos_congestion():
+    """Obtiene la distribución de congestión por distrito"""
+    conn = psycopg2.connect(NEON_CONN)
+    query = """
+        SELECT dg.distrito, ft.nivel_congestion, COUNT(*) AS cantidad
+        FROM fact_tramites ft
+        JOIN dim_geografia dg ON ft.id_distrito = dg.id_distrito
+        GROUP BY dg.distrito, ft.nivel_congestion
+        ORDER BY dg.distrito, ft.nivel_congestion;
+    """
+    df = pd.read_sql(query, conn)
+    conn.close()
     return df
 
 # ==========================================

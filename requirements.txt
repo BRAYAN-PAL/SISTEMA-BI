@@ -2,4 +2,4 @@ streamlit
 pandas
 matplotlib
 seaborn
-psycopg[binary]
+psycopg2-binary
