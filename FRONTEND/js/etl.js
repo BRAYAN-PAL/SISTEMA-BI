@@ -18,6 +18,11 @@ let isLoading = false;
 const STORAGE_KEY = "stagingDataList";
 const ACTIVE_KEY = "stagingActiveId";
 
+// DETECTA AUTOMÁTICAMENTE LA URL: Si la web corre en Render, usa Render. Si corre en local, usa localhost.
+const API_BASE_URL = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+  ? "http://localhost:3000"
+  : `${window.location.protocol}//${window.location.host}`;
+
 const prepLines = [
   "Extrayendo datos...",
   "Transformando datos...",
@@ -165,19 +170,24 @@ const runPrepSimulation = () => {
   }, 360);
 };
 
+// ─── Función de envío adaptada a Supabase y Render ─────────────────────────
 const uploadToDatabase = async (activeItem) => {
   const sourceRows = activeItem.fullRows || activeItem.rows || [];
+  
+  // Normalización estricta de las cabeceras a minúsculas para coincidir con PostgreSQL
   const estructuradoJSON = sourceRows.map((row) => {
     const obj = {};
     activeItem.headers.forEach((header, index) => {
-      const key = String(header).trim().toLowerCase();
+      // Reemplaza espacios por guiones bajos si tu excel viene separado, y convierte a minúsculas
+      const key = String(header).trim().toLowerCase().replace(/\s+/g, '_');
       obj[key] = row[index] !== undefined ? row[index] : null;
     });
     return obj;
   });
 
   try {
-    const respuesta = await fetch("http://localhost:3000/api/cargar-excel", {
+    // Reemplazada la URL estática por API_BASE_URL dinámica
+    const respuesta = await fetch(`${API_BASE_URL}/api/cargar-excel`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -191,9 +201,9 @@ const uploadToDatabase = async (activeItem) => {
       alert(resultado.mensaje);
       return true;
     }
-    throw new Error(resultado.mensaje || "Error interno del servidor SQL.");
+    throw new Error(resultado.mensaje || "Error en el servidor de base de datos.");
   } catch (error) {
-    console.error("Error al inyectar a SQL Server:", error);
+    console.error("Error al inyectar a Supabase:", error);
     alert(`Error en la carga: ${error.message}`);
     return false;
   }
