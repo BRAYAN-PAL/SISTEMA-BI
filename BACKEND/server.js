@@ -1,5 +1,5 @@
 const express = require("express");
-const sql = require("mssql");
+const { Pool } = require("pg"); // Cambiado mssql por pg (PostgreSQL)
 const cors = require("cors");
 const path = require("path");
 const fs = require("fs");
@@ -15,13 +15,13 @@ const PORT = 3000;
 const ML_DIR = path.join(__dirname, "..", "ML");
 const ML_OUTPUT_DIR = path.join(ML_DIR, "output");
 
+// Configuración para Supabase (Usa la URI de conexión que te da Supabase)
 const dbConfig = {
-  user: "sa",
-  password: "123456",
-  server: "localhost",
-  database: "DataWarehouse_Tramites",
-  options: { encrypt: false, trustServerCertificate: true },
+  connectionString: process.env.DATABASE_URL || "postgresql://postgres:tu_password_aqui@db.your-supabase-id.supabase.co:5432/postgres",
+  ssl: { rejectUnauthorized: false } // Requerido para conexiones seguras con Supabase en la nube
 };
+
+const pool = new Pool(dbConfig);
 
 // ==========================================
 // MIDDLEWARES
@@ -29,7 +29,7 @@ const dbConfig = {
 
 app.use(express.json({ limit: "50mb" }));
 app.use(cors({
-  origin: ["http://127.0.0.1:5500", "http://localhost:5500", "http://localhost:3000"],
+  origin: ["http://127.0.0.1:5500", "http://localhost:5500", "http://localhost:3000", "*.onrender.com"],
   methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type"],
 }));
@@ -55,7 +55,7 @@ app.get("/html/index.html", (req, res) => {
   res.sendFile(path.join(__dirname, "../FRONTEND/html/index.html"));
 });
 
-// ─── Cargar Excel ─────────────────────────
+// ─── Cargar Excel (Adaptado a PostgreSQL / Supabase) ─────────────────────────
 app.post("/api/cargar-excel", async (req, res) => {
   const { tramites } = req.body;
 
@@ -63,65 +63,74 @@ app.post("/api/cargar-excel", async (req, res) => {
     return res.status(400).json({ status: "Error", mensaje: "Estructura de datos inválida." });
   }
 
+  const client = await pool.connect();
   try {
-    let pool = await sql.connect(dbConfig);
-    await pool.request().query("TRUNCATE TABLE staging_tramitacion");
+    await client.query("BEGIN");
+    
+    // 1. Limpiar tabla staging
+    await client.query("TRUNCATE TABLE staging_tramitacion");
 
-    const table = new sql.Table("staging_tramitacion");
-    table.columns.add("id_tramite", sql.Int, { nullable: true });
-    table.columns.add("distrito", sql.VarChar(100), { nullable: true });
-    table.columns.add("tipo_tramite", sql.VarChar(100), { nullable: true });
-    table.columns.add("fecha", sql.Date, { nullable: true });
-    table.columns.add("personas_cola", sql.Int, { nullable: true });
-    table.columns.add("tiempo_espera_min", sql.Int, { nullable: true });
-    table.columns.add("ventanillas", sql.Int, { nullable: true });
-    table.columns.add("estado", sql.VarChar(50), { nullable: true });
-    table.columns.add("promedio_atencion", sql.Decimal(5, 2), { nullable: true });
-    table.columns.add("personas_por_ventanilla", sql.Decimal(5, 2), { nullable: true });
-    table.columns.add("nivel_congestion", sql.VarChar(50), { nullable: true });
+    // 2. Inserción masiva compatible con PostgreSQL mediante bloques parametrizados
+    if (tramites.length > 0) {
+      const insertQuery = `
+        INSERT INTO staging_tramitacion (
+          id_tramite, distrito, tipo_tramite, fecha, personas_cola, 
+          tiempo_espera_min, ventanillas, estado, promedio_atencion, 
+          personas_por_ventanilla, nivel_congestion
+        ) VALUES ${tramites.map((_, i) => `($${i * 11 + 1}, $${i * 11 + 2}, $${i * 11 + 3}, $${i * 11 + 4}, $${i * 11 + 5}, $${i * 11 + 6}, $${i * 11 + 7}, $${i * 11 + 8}, $${i * 11 + 9}, $${i * 11 + 10}, $${i * 11 + 11})`).join(",")}
+      `;
 
-    tramites.forEach((t) => {
-      table.rows.add(
-        t.id_tramite ? parseInt(t.id_tramite, 10) : null,
-        t.distrito ? String(t.distrito).trim() : null,
-        t.tipo_tramite ? String(t.tipo_tramite).trim() : null,
-        t.fecha ? new Date(t.fecha).toISOString().slice(0, 10) : null,
-        t.personas_cola && !isNaN(t.personas_cola) ? parseInt(t.personas_cola, 10) : 0,
-        t.tiempo_espera_min && !isNaN(t.tiempo_espera_min) ? parseInt(t.tiempo_espera_min, 10) : 0,
-        t.ventanillas && !isNaN(t.ventanillas) ? parseInt(t.ventanillas, 10) : 0,
-        t.estado ? String(t.estado).trim() : null,
-        t.promedio_atencion && !isNaN(t.promedio_atencion) ? parseFloat(t.promedio_atencion) : 0.0,
-        t.personas_por_ventanilla && !isNaN(t.personas_por_ventanilla) ? parseFloat(t.personas_por_ventanilla) : 0.0,
-        t.nivel_congestion ? String(t.nivel_congestion).trim() : null
-      );
-    });
+      const values = [];
+      tramites.forEach((t) => {
+        values.push(
+          t.id_tramite ? parseInt(t.id_tramite, 10) : null,
+          t.distrito ? String(t.distrito).trim() : null,
+          t.tipo_tramite ? String(t.tipo_tramite).trim() : null,
+          t.fecha ? new Date(t.fecha).toISOString().slice(0, 10) : null,
+          t.personas_cola && !isNaN(t.personas_cola) ? parseInt(t.personas_cola, 10) : 0,
+          t.tiempo_espera_min && !isNaN(t.tiempo_espera_min) ? parseInt(t.tiempo_espera_min, 10) : 0,
+          t.ventanillas && !isNaN(t.ventanillas) ? parseInt(t.ventanillas, 10) : 0,
+          t.estado ? String(t.estado).trim() : null,
+          t.promedio_atencion && !isNaN(t.promedio_atencion) ? parseFloat(t.promedio_atencion) : 0.0,
+          t.personas_por_ventanilla && !isNaN(t.personas_por_ventanilla) ? parseFloat(t.personas_por_ventanilla) : 0.0,
+          t.nivel_congestion ? String(t.nivel_congestion).trim() : null
+        );
+      });
 
-    const request = pool.request();
-    await request.bulk(table);
-    await request.execute("sp_CargarModeloCopoNieve");
+      await client.query(insertQuery, values);
+    }
 
+    // 3. Ejecutar función/procedimiento en Postgres (Asegúrate de migrar tu SP a Supabase como Función)
+    await client.query("SELECT sp_CargarModeloCopoNieve()");
+
+    await client.query("COMMIT");
     res.json({ status: "OK", mensaje: "¡Base de datos reescrita exitosamente!" });
   } catch (error) {
+    await client.query("ROLLBACK");
     console.error("Error crítico en el backend:", error);
     res.status(500).json({ status: "Error", mensaje: `Error: ${error.message}` });
+  } finally {
+    client.release();
   }
 });
 
-// ─── Obtener esquema ──────────────────────
+// ─── Obtener esquema (Adaptado a PostgreSQL) ──────────────────────
 app.get("/api/obtener-esquema", async (req, res) => {
   try {
-    let pool = await sql.connect(dbConfig);
-    const result = await pool.request().query(`
-      SELECT TABLE_NAME, COLUMN_NAME
-      FROM INFORMATION_SCHEMA.COLUMNS
-      WHERE TABLE_NAME IN ('fact_tramites', 'dim_tramite', 'dim_tipo_tramite', 'dim_geografia', 'dim_estado', 'dim_tiempo')
-      ORDER BY TABLE_NAME, ORDINAL_POSITION;
+    const result = await pool.query(`
+      SELECT table_name, column_name
+      FROM information_schema.columns
+      WHERE table_name IN ('fact_tramites', 'dim_tramite', 'dim_tipo_tramite', 'dim_geografia', 'dim_estado', 'dim_tiempo')
+      ORDER BY table_name, ordinal_position;
     `);
 
     const esquema = {};
-    result.recordset.forEach((row) => {
-      if (!esquema[row.TABLE_NAME]) esquema[row.TABLE_NAME] = [];
-      esquema[row.TABLE_NAME].push(row.COLUMN_NAME);
+    result.rows.forEach((row) => {
+      // PostgreSQL retorna en minúsculas por defecto
+      const tableName = row.table_name;
+      const columnName = row.column_name;
+      if (!esquema[tableName]) esquema[tableName] = [];
+      esquema[tableName].push(columnName);
     });
 
     res.json({ status: "OK", datos: esquema });
@@ -130,7 +139,7 @@ app.get("/api/obtener-esquema", async (req, res) => {
   }
 });
 
-// ─── Entrenamiento IA ─────────────────────
+// ─── Entrenamiento IA (Adaptado a PostgreSQL) ─────────────────────
 app.post("/api/ia/entrenar", async (req, res) => {
   let responseSent = false;
   const safeError = (status, mensaje) => {
@@ -153,8 +162,7 @@ app.post("/api/ia/entrenar", async (req, res) => {
       writeCsv(rows, csvPath);
       console.log(`[IA] Filas cargadas desde Proceso: ${rows.length}`);
     } else {
-      const pool = await sql.connect(dbConfig);
-      const result = await pool.request().query(`
+      const result = await pool.query(`
         SELECT dtm.id_tramite, dtt.tipo_tramite, dg.distrito, de.estado, ft.fecha,
           ft.personas_cola, ft.tiempo_espera_min, ft.ventanillas,
           ft.promedio_atencion, ft.personas_por_ventanilla, ft.nivel_congestion
@@ -164,9 +172,9 @@ app.post("/api/ia/entrenar", async (req, res) => {
         JOIN dim_geografia dg ON ft.id_distrito = dg.id_distrito
         JOIN dim_estado de ON ft.id_estado = de.id_estado
       `);
-      if (!result.recordset.length) return safeError(400, "No hay datos en fact_tramites para entrenar.");
-      writeCsv(result.recordset, csvPath);
-      console.log(`[IA] Filas exportadas desde SQL: ${result.recordset.length}`);
+      if (!result.rows.length) return safeError(400, "No hay datos en fact_tramites para entrenar.");
+      writeCsv(result.rows, csvPath);
+      console.log(`[IA] Filas exportadas desde Supabase: ${result.rows.length}`);
     }
 
     const scriptPath = path.join(ML_DIR, "train_congestion.py");
@@ -213,58 +221,55 @@ app.post("/api/ia/entrenar", async (req, res) => {
   }
 });
 
-// ─── KPIs Semántica ──────────────────────
+// ─── KPIs Semántica (Adaptado a PostgreSQL) ──────────────────────
 app.post("/api/semantica/calcular", async (req, res) => {
   console.log("[Semántica] Solicitud de cálculo de KPIs recibida.");
   try {
-    const pool = await sql.connect(dbConfig);
-
-    await pool.request().query(`
-      IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'FactKPIs')
-      BEGIN
-        CREATE TABLE FactKPIs(
-          KPIKey INT IDENTITY(1,1) PRIMARY KEY,
-          NombreKPI VARCHAR(100),
-          Valor DECIMAL(10,2),
-          Meta DECIMAL(10,2),
-          FechaCalculo DATETIME
-        );
-      END
+    // Crear tabla si no existe usando sintaxis estándar de Postgres
+    await pool.query(`
+      CREATE TABLE IF NOT EXISTS FactKPIs(
+        KPIKey SERIAL PRIMARY KEY,
+        NombreKPI VARCHAR(100),
+        Valor DECIMAL(10,2),
+        Meta DECIMAL(10,2),
+        FechaCalculo TIMESTAMP DEFAULT NOW()
+      );
     `);
 
-    const totalRes = await pool.request().query("SELECT COUNT(*) AS total FROM fact_tramites;");
-    const total = totalRes.recordset[0]?.total || 0;
+    const totalRes = await pool.query("SELECT COUNT(*) AS total FROM fact_tramites;");
+    const total = parseInt(totalRes.rows[0]?.total || 0, 10);
     if (!total) return res.status(400).json({ status: "ERROR", mensaje: "No hay registros en fact_tramites." });
 
-    const atendidasRes = await pool.request().query(
+    const atendidasRes = await pool.query(
       "SELECT COUNT(*) AS atendidas FROM fact_tramites WHERE UPPER(nivel_congestion) IN ('BAJA', 'MEDIA');"
     );
-    const canceladasRes = await pool.request().query(
+    const canceladasRes = await pool.query(
       "SELECT COUNT(*) AS canceladas FROM fact_tramites WHERE UPPER(nivel_congestion) = 'ALTA';"
     );
-    const tiempoRes = await pool.request().query(
-      "SELECT AVG(CAST(tiempo_espera_min AS DECIMAL(10,2))) AS avgTiempo FROM fact_tramites;"
+    const tiempoRes = await pool.query(
+      "SELECT AVG(tiempo_espera_min::numeric) AS avgtiempo FROM fact_tramites;"
     );
 
-    const asistenciaVal = ((atendidasRes.recordset[0]?.atendidas || 0) * 100.0) / total;
-    const cancelacionVal = ((canceladasRes.recordset[0]?.canceladas || 0) * 100.0) / total;
-    const tiempoVal = tiempoRes.recordset[0]?.avgTiempo || 0;
+    const asistenciaVal = (parseInt(atendidasRes.rows[0]?.atendidas || 0, 10) * 100.0) / total;
+    const cancelacionVal = (parseInt(canceladasRes.rows[0]?.canceladas || 0, 10) * 100.0) / total;
+    const tiempoVal = parseFloat(tiempoRes.rows[0]?.avgtiempo || 0);
 
-    await pool.request().query(`
+    await pool.query(`
       INSERT INTO FactKPIs (NombreKPI, Valor, Meta, FechaCalculo)
       VALUES
-        ('Tasa Asistencia', ${asistenciaVal}, 85, GETDATE()),
-        ('Tasa Cancelacion', ${cancelacionVal}, 10, GETDATE()),
-        ('Tiempo Promedio', ${tiempoVal}, 30, GETDATE());
+        ('Tasa Asistencia', ${asistenciaVal}, 85, NOW()),
+        ('Tasa Cancelacion', ${cancelacionVal}, 10, NOW()),
+        ('Tiempo Promedio', ${tiempoVal}, 30, NOW());
     `);
 
-    const qProductividad = await pool.request().query(`
-      SELECT TOP 5 dg.distrito AS Distrito, COUNT(*) AS TramitesAtendidos,
-        CAST(COUNT(*) * 1.0 AS DECIMAL(10,2)) AS KPI_Productividad
+    const qProductividad = await pool.query(`
+      SELECT dg.distrito AS Distrito, COUNT(*) AS TramitesAtendidos,
+        COUNT(*)::numeric AS KPI_Productividad
       FROM fact_tramites ft
       JOIN dim_geografia dg ON ft.id_distrito = dg.id_distrito
       GROUP BY dg.distrito
-      ORDER BY KPI_Productividad DESC;
+      ORDER BY KPI_Productividad DESC
+      LIMIT 5;
     `);
 
     console.log("[Semántica] KPIs calculados y centralizados en FactKPIs con éxito.");
@@ -275,7 +280,7 @@ app.post("/api/semantica/calcular", async (req, res) => {
         asistencia: asistenciaVal,
         cancelacion: cancelacionVal,
         tiempoPromedio: tiempoVal,
-        productividad: qProductividad.recordset,
+        productividad: qProductividad.rows,
       }
     });
   } catch (err) {
