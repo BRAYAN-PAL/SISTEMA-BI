@@ -397,7 +397,6 @@ st.markdown(
     <div class="hero-banner">
         <div class="hero-kicker">Dashboard Ejecutivo</div>
         <div class="hero-title">Plataforma Integral de Analítica Universitaria con BI, Big Data e IA Ética para la Predicción de Congestión de Trámites Administrativos</div>
-        <div class="hero-subtitle">Seguimiento de trámites, personas en cola, tiempos de espera y distribución por distrito</div>
     </div>
     """,
     unsafe_allow_html=True,
