@@ -110,9 +110,10 @@ document.addEventListener("DOMContentLoaded", () => {
     btnCalcularKpis.addEventListener("click", calcularKpis);
   }
 
-  if (openBi) {
+    if (openBi) {
     openBi.addEventListener("click", () => {
-      setConsole("Abriendo diagrama BI...", "#2ecc71");
+      setConsole("Abriendo Dashboard BI en Streamlit...", "#2ecc71");
+      window.open("https://sistema-bi-reyzccyhbw35ooddidfemt.streamlit.app/", "_blank");
     });
   }
 
