@@ -24,4 +24,4 @@ ENV PYTHON_CMD=python
 
 EXPOSE 3000
 
-CMD ["node", "BACKEND/server.js"]
+CMD ["node", "SIS/BACKEND/server.js"]

@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const openBi = document.getElementById("openBi");
   const finishProject = document.getElementById("finishProject");
 
-  const BACKEND_URL = "http://localhost:3000";
+  const BACKEND_URL = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+    ? "http://localhost:3000"
+    : `${window.location.protocol}//${window.location.host}`;
 
   const formatPercent = (value) => {
     const num = Number(value);

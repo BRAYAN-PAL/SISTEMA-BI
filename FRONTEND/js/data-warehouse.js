@@ -16,7 +16,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     // 1. Extraer el diccionario de datos real de SQL Server
-    const respuesta = await fetch("http://localhost:3000/api/obtener-esquema");
+    const API_BASE = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+      ? "http://localhost:3000"
+      : `${window.location.protocol}//${window.location.host}`;
+    const respuesta = await fetch(`${API_BASE}/api/obtener-esquema`);
     const resultado = await respuesta.json();
 
     if (resultado.status !== "OK") {

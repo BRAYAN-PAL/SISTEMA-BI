@@ -24,12 +24,107 @@ const dbConfig = {
 const pool = new Pool(dbConfig);
 
 // ==========================================
+// FUNCIÓN PARA INICIALIZAR BD AUTOMÁTICAMENTE
+// ==========================================
+
+async function inicializarBaseDeDatos() {
+  const client = await pool.connect();
+  try {
+    console.log("[BD] Inicializando esquema de base de datos...");
+
+    await client.query(`CREATE TABLE IF NOT EXISTS dim_tipo_tramite (
+      id_tipo_tramite SERIAL PRIMARY KEY, tipo_tramite VARCHAR(100) NOT NULL UNIQUE
+    );`);
+    await client.query(`CREATE TABLE IF NOT EXISTS dim_tramite (
+      sk_tramite SERIAL PRIMARY KEY, id_tramite INT NOT NULL UNIQUE,
+      id_tipo_tramite INT REFERENCES dim_tipo_tramite(id_tipo_tramite)
+    );`);
+    await client.query(`CREATE TABLE IF NOT EXISTS dim_geografia (
+      id_distrito SERIAL PRIMARY KEY, distrito VARCHAR(100) NOT NULL UNIQUE
+    );`);
+    await client.query(`CREATE TABLE IF NOT EXISTS dim_estado (
+      id_estado SERIAL PRIMARY KEY, estado VARCHAR(50) NOT NULL UNIQUE
+    );`);
+    await client.query(`CREATE TABLE IF NOT EXISTS dim_tiempo (
+      fecha DATE PRIMARY KEY, anio INT, mes INT, dia INT, dia_semana VARCHAR(20)
+    );`);
+    await client.query(`CREATE TABLE IF NOT EXISTS fact_tramites (
+      id_fact SERIAL PRIMARY KEY,
+      sk_tramite INT REFERENCES dim_tramite(sk_tramite),
+      id_distrito INT REFERENCES dim_geografia(id_distrito),
+      fecha DATE REFERENCES dim_tiempo(fecha),
+      id_estado INT REFERENCES dim_estado(id_estado),
+      personas_cola INT, tiempo_espera_min INT, ventanillas INT,
+      promedio_atencion DECIMAL(5,2), personas_por_ventanilla DECIMAL(5,2),
+      nivel_congestion VARCHAR(50)
+    );`);
+    await client.query(`CREATE TABLE IF NOT EXISTS staging_tramitacion (
+      id_tramite INT, distrito VARCHAR(100), tipo_tramite VARCHAR(100),
+      fecha DATE, personas_cola INT, tiempo_espera_min INT, ventanillas INT,
+      estado VARCHAR(50), promedio_atencion DECIMAL(5,2),
+      personas_por_ventanilla DECIMAL(5,2), nivel_congestion VARCHAR(50)
+    );`);
+
+    // Función ETL equivalente al SP de SQL Server
+    await client.query(`
+      CREATE OR REPLACE FUNCTION sp_CargarModeloCopoNieve()
+      RETURNS VOID LANGUAGE plpgsql AS $$
+      BEGIN
+        SET CONSTRAINTS ALL DEFERRED;
+        DELETE FROM fact_tramites; DELETE FROM dim_tramite;
+        DELETE FROM dim_tipo_tramite; DELETE FROM dim_geografia;
+        DELETE FROM dim_estado; DELETE FROM dim_tiempo;
+        PERFORM setval('dim_tipo_tramite_id_tipo_tramite_seq', 1, false);
+        PERFORM setval('dim_tramite_sk_tramite_seq', 1, false);
+        PERFORM setval('dim_geografia_id_distrito_seq', 1, false);
+        PERFORM setval('dim_estado_id_estado_seq', 1, false);
+        PERFORM setval('fact_tramites_id_fact_seq', 1, false);
+        SET CONSTRAINTS ALL IMMEDIATE;
+
+        INSERT INTO dim_tipo_tramite (tipo_tramite)
+        SELECT DISTINCT tipo_tramite FROM staging_tramitacion WHERE tipo_tramite IS NOT NULL;
+        INSERT INTO dim_tramite (id_tramite, id_tipo_tramite)
+        SELECT DISTINCT st.id_tramite, dtt.id_tipo_tramite
+        FROM staging_tramitacion st JOIN dim_tipo_tramite dtt ON st.tipo_tramite = dtt.tipo_tramite
+        WHERE st.id_tramite IS NOT NULL;
+        INSERT INTO dim_geografia (distrito)
+        SELECT DISTINCT distrito FROM staging_tramitacion WHERE distrito IS NOT NULL;
+        INSERT INTO dim_estado (estado)
+        SELECT DISTINCT estado FROM staging_tramitacion WHERE estado IS NOT NULL;
+        INSERT INTO dim_tiempo (fecha, anio, mes, dia, dia_semana)
+        SELECT DISTINCT fecha, EXTRACT(YEAR FROM fecha)::INT, EXTRACT(MONTH FROM fecha)::INT,
+          EXTRACT(DAY FROM fecha)::INT, TO_CHAR(fecha, 'FMDay')
+        FROM staging_tramitacion WHERE fecha IS NOT NULL;
+        INSERT INTO fact_tramites (sk_tramite, id_distrito, fecha, id_estado,
+          personas_cola, tiempo_espera_min, ventanillas,
+          promedio_atencion, personas_por_ventanilla, nivel_congestion)
+        SELECT dt.sk_tramite, dg.id_distrito, dtm.fecha, de.id_estado,
+          st.personas_cola, st.tiempo_espera_min, st.ventanillas,
+          st.promedio_atencion, st.personas_por_ventanilla, st.nivel_congestion
+        FROM staging_tramitacion st
+        JOIN dim_tramite dt ON st.id_tramite = dt.id_tramite
+        JOIN dim_geografia dg ON st.distrito = dg.distrito
+        JOIN dim_estado de ON st.estado = de.estado
+        JOIN dim_tiempo dtm ON st.fecha = dtm.fecha;
+        TRUNCATE TABLE staging_tramitacion;
+      END;
+      $$;
+    `);
+    console.log("[BD] Esquema de base de datos inicializado correctamente.");
+  } catch (error) {
+    console.error("[BD] Error al inicializar esquema:", error.message);
+  } finally {
+    client.release();
+  }
+}
+
+// ==========================================
 // MIDDLEWARES
 // ==========================================
 
 app.use(express.json({ limit: "50mb" }));
 app.use(cors({
-  origin: ["http://127.0.0.1:5500", "http://localhost:5500", "http://localhost:3000", "*.onrender.com"],
+  origin: ["http://127.0.0.1:5500", "http://localhost:5500", "http://localhost:3000"],
   methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type"],
 }));
@@ -320,8 +415,15 @@ const writeCsv = (rows, filePath) => {
 // INICIO DEL SERVIDOR
 // ==========================================
 
-app.listen(PORT, () => {
-  console.log(`Servidor backend escuchando en http://localhost:${PORT}`);
-  console.log(`Frontend disponible en http://localhost:${PORT}/html/capa-ia.html`);
-  console.log(`Gráficos servidos desde: ${ML_OUTPUT_DIR}`);
+inicializarBaseDeDatos().then(() => {
+  app.listen(PORT, () => {
+    console.log(`Servidor backend escuchando en http://localhost:${PORT}`);
+    console.log(`Frontend disponible en http://localhost:${PORT}/html/capa-ia.html`);
+    console.log(`Gráficos servidos desde: ${ML_OUTPUT_DIR}`);
+  });
+}).catch((err) => {
+  console.error("[BD] Error fatal al inicializar BD:", err);
+  app.listen(PORT, () => {
+    console.log(`Servidor iniciado (sin BD): http://localhost:${PORT}`);
+  });
 });

@@ -2,4 +2,4 @@ services:
   - type: web
     name: sis-app
     env: docker
-    dockerfilePath: ./Dockerfile
+    dockerfilePath: ./SIS/Dockerfile
