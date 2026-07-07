@@ -15,19 +15,65 @@ const PORT = 3000;
 const ML_DIR = path.join(__dirname, "..", "ML");
 const ML_OUTPUT_DIR = path.join(ML_DIR, "output");
 
-// Configuración para Supabase (Usa la URI de conexión que te da Supabase)
+// Configuración para Neon (PostgreSQL serverless con IPv4)
+const databaseUrl = process.env.DATABASE_URL || "postgresql://neondb_owner:npg_lZjfe4O6HUPW@ep-restless-brook-ai7pp00g.c-4.us-east-1.aws.neon.tech/neondb?sslmode=require";
+
+// Configuración del pool de PostgreSQL con soporte para IPv4/IPv6
 const dbConfig = {
-  connectionString: process.env.DATABASE_URL || "postgresql://postgres:tu_password_aqui@db.your-supabase-id.supabase.co:5432/postgres",
-  ssl: { rejectUnauthorized: false } // Requerido para conexiones seguras con Supabase en la nube
+  connectionString: databaseUrl,
+  ssl: { rejectUnauthorized: false },
+  family: 4, // Forzar IPv4
+  connectionTimeoutMillis: 10000
 };
 
-const pool = new Pool(dbConfig);
+// Segundo pool de respaldo sin family (por si el host solo tiene IPv6)
+const dbConfigFallback = {
+  connectionString: databaseUrl,
+  ssl: { rejectUnauthorized: false },
+  connectionTimeoutMillis: 10000
+};
+
+let pool = new Pool(dbConfig);
+let usandoIPv4 = true;
+
+// Función para probar y cambiar a IPv6 si falla
+async function probarConexion() {
+  try {
+    const client = await pool.connect();
+    client.release();
+    return true;
+  } catch (err) {
+    if (err.code === 'ENETUNREACH' && usandoIPv4) {
+      console.log("[BD] IPv4 no disponible, intentando con IPv6...");
+      pool = new Pool(dbConfigFallback);
+      usandoIPv4 = false;
+      try {
+        const client = await pool.connect();
+        client.release();
+        console.log("[BD] Conectado exitosamente con IPv6");
+        return true;
+      } catch (err2) {
+        console.error("[BD] También falló IPv6:", err2.message);
+        return false;
+      }
+    }
+    console.error("[BD] Error de conexión:", err.message);
+    return false;
+  }
+}
 
 // ==========================================
 // FUNCIÓN PARA INICIALIZAR BD AUTOMÁTICAMENTE
 // ==========================================
 
 async function inicializarBaseDeDatos() {
+  console.log("[BD] Probando conexión a la base de datos...");
+  const conectado = await probarConexion();
+  if (!conectado) {
+    console.log("[BD] No se pudo conectar a la base de datos. Continuando sin BD...");
+    return;
+  }
+
   const client = await pool.connect();
   try {
     console.log("[BD] Inicializando esquema de base de datos...");
