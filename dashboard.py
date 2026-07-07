@@ -22,11 +22,21 @@ CSV_FALLBACK = BASE_DIR / "ML" / "output" / "dataset.csv"
 DATABASE_URL = os.getenv("DATABASE_URL")
 
 
-def _load_database_dataframe() -> pd.DataFrame:
+def _load_database_dataframe(query: str, params: list | tuple | None = None) -> pd.DataFrame:
     if not DATABASE_URL:
         raise RuntimeError("DATABASE_URL no configurada")
 
-    query = """
+    conn = psycopg2.connect(DATABASE_URL)
+    try:
+        df = pd.read_sql(query, conn, params=params)
+    finally:
+        conn.close()
+
+    return df
+
+
+def _base_fact_query(where_clause: str = "") -> str:
+    return f"""
         SELECT
             ft.fecha,
             dg.distrito,
@@ -43,16 +53,25 @@ def _load_database_dataframe() -> pd.DataFrame:
         INNER JOIN dim_tipo_tramite dtt ON dt.id_tipo_tramite = dtt.id_tipo_tramite
         INNER JOIN dim_geografia dg ON ft.id_distrito = dg.id_distrito
         INNER JOIN dim_estado de ON ft.id_estado = de.id_estado
+        {where_clause}
         ORDER BY ft.fecha DESC, dg.distrito;
     """
 
-    conn = psycopg2.connect(DATABASE_URL)
-    try:
-        df = pd.read_sql(query, conn)
-    finally:
-        conn.close()
 
-    return df
+def _base_options_query() -> str:
+    return """
+        SELECT
+            ft.fecha,
+            dg.distrito,
+            dtt.tipo_tramite,
+            de.estado,
+            ft.nivel_congestion
+        FROM fact_tramites ft
+        INNER JOIN dim_tramite dt ON ft.sk_tramite = dt.sk_tramite
+        INNER JOIN dim_tipo_tramite dtt ON dt.id_tipo_tramite = dtt.id_tipo_tramite
+        INNER JOIN dim_geografia dg ON ft.id_distrito = dg.id_distrito
+        INNER JOIN dim_estado de ON ft.id_estado = de.id_estado;
+    """
 
 
 def _load_csv_dataframe() -> pd.DataFrame:
@@ -89,16 +108,47 @@ def _normalize_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     return frame
 
 
+def _load_csv_dataframe_for_query(where_mask: pd.Series | None = None) -> pd.DataFrame:
+    frame = _normalize_dataframe(_load_csv_dataframe())
+    if where_mask is not None:
+        return frame.loc[where_mask].copy()
+    return frame
+
+
 @st.cache_data(ttl=60)
 def load_dashboard_data() -> tuple[pd.DataFrame, str]:
     try:
-        df = _load_database_dataframe()
+        df = _load_database_dataframe(_base_options_query())
         source = "PostgreSQL"
     except Exception:
         df = _load_csv_dataframe()
         source = "CSV local"
 
     return _normalize_dataframe(df), source
+
+
+def build_dashboard_where_clause(filters: dict) -> tuple[str, list]:
+    clauses = []
+    params: list = []
+
+    if filters.get("start_date") and filters.get("end_date"):
+        clauses.append("ft.fecha BETWEEN %s AND %s")
+        params.extend([filters["start_date"], filters["end_date"]])
+    if filters.get("district") and filters["district"] != "Todas":
+        clauses.append("dg.distrito = %s")
+        params.append(filters["district"])
+    if filters.get("tramite_type") and filters["tramite_type"] != "Todas":
+        clauses.append("dtt.tipo_tramite = %s")
+        params.append(filters["tramite_type"])
+    if filters.get("state") and filters["state"] != "Todas":
+        clauses.append("de.estado = %s")
+        params.append(filters["state"])
+    if filters.get("congestion") and filters["congestion"] != "Todas":
+        clauses.append("ft.nivel_congestion = %s")
+        params.append(filters["congestion"])
+
+    where_clause = f"WHERE {' AND '.join(clauses)}" if clauses else ""
+    return where_clause, params
 
 
 def format_short_number(value: float) -> str:
@@ -131,7 +181,7 @@ def render_metric_card(title: str, value: str, subtitle: str = "") -> str:
     """
 
 
-def reset_filters(default_date_range: tuple, min_date, max_date) -> None:
+def reset_filters(default_date_range: tuple) -> None:
     st.session_state.date_range = default_date_range
     st.session_state.district_filter = "Todas"
     st.session_state.type_filter = "Todas"
@@ -183,12 +233,27 @@ def apply_filters(df: pd.DataFrame) -> pd.DataFrame:
             "LIMPIAR FILTROS",
             use_container_width=True,
             on_click=reset_filters,
-            args=((min_date, max_date), min_date, max_date),
+            args=((min_date, max_date),),
         ):
             pass
 
+    filters = {
+        "start_date": date_range[0] if isinstance(date_range, (tuple, list)) and len(date_range) == 2 else None,
+        "end_date": date_range[1] if isinstance(date_range, (tuple, list)) and len(date_range) == 2 else None,
+        "district": district,
+        "tramite_type": tramite_type,
+        "state": state,
+        "congestion": congestion,
+    }
+
+    if DATABASE_URL:
+        where_clause, params = build_dashboard_where_clause(filters)
+        query = _base_fact_query(where_clause)
+        filtered = _normalize_dataframe(_load_database_dataframe(query, params))
+        return filtered
+
     filtered = df.copy()
-    if isinstance(date_range, tuple) and len(date_range) == 2:
+    if isinstance(date_range, (tuple, list)) and len(date_range) == 2:
         start_date, end_date = date_range
         filtered = filtered[
             (pd.to_datetime(filtered["fecha"], errors="coerce").dt.date >= start_date)
