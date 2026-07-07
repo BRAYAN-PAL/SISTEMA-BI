@@ -131,6 +131,14 @@ def render_metric_card(title: str, value: str, subtitle: str = "") -> str:
     """
 
 
+def reset_filters(default_date_range: tuple, min_date, max_date) -> None:
+    st.session_state.date_range = default_date_range
+    st.session_state.district_filter = "Todas"
+    st.session_state.type_filter = "Todas"
+    st.session_state.state_filter = "Todas"
+    st.session_state.congestion_filter = "Todas"
+
+
 def apply_filters(df: pd.DataFrame) -> pd.DataFrame:
     if df.empty:
         return df
@@ -171,13 +179,13 @@ def apply_filters(df: pd.DataFrame) -> pd.DataFrame:
         state = st.selectbox("ESTADO", state_options, key="state_filter")
         congestion = st.selectbox("CONGESTIÓN", congestion_options, key="congestion_filter")
 
-        if st.button("LIMPIAR FILTROS", use_container_width=True):
-            st.session_state.date_range = (min_date, max_date)
-            st.session_state.district_filter = "Todas"
-            st.session_state.type_filter = "Todas"
-            st.session_state.state_filter = "Todas"
-            st.session_state.congestion_filter = "Todas"
-            st.rerun()
+        if st.button(
+            "LIMPIAR FILTROS",
+            use_container_width=True,
+            on_click=reset_filters,
+            args=((min_date, max_date), min_date, max_date),
+        ):
+            pass
 
     filtered = df.copy()
     if isinstance(date_range, tuple) and len(date_range) == 2:
@@ -308,13 +316,31 @@ st.markdown(
         .hero-banner {
             background: linear-gradient(90deg, #103c74 0%, #0b2f5b 60%, #103c74 100%);
             color: white;
-            padding: 1rem 1.4rem;
+            padding: 0.9rem 1.4rem 1rem 1.4rem;
             text-align: center;
-            font-size: 1.02rem;
-            font-weight: 600;
+            border-bottom: 3px solid #082442;
+        }
+
+        .hero-kicker {
+            font-size: 0.8rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            opacity: 0.88;
+            margin-bottom: 0.25rem;
+        }
+
+        .hero-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            line-height: 1.25;
             letter-spacing: 0.02em;
             text-transform: uppercase;
-            border-bottom: 3px solid #082442;
+        }
+
+        .hero-subtitle {
+            margin-top: 0.25rem;
+            font-size: 0.88rem;
+            opacity: 0.9;
         }
 
         .kpi-row {
@@ -369,7 +395,9 @@ st.markdown(
 st.markdown(
     """
     <div class="hero-banner">
-        PLATAFORMA INTEGRAL DE ANALÍTICA UNIVERSITARIA CON BI, BIG DATA E IA ÉTICA PARA LA PREDICCIÓN DE CONGESTIÓN DE TRÁMITES ADMINISTRATIVOS
+        <div class="hero-kicker">Dashboard Ejecutivo</div>
+        <div class="hero-title">Plataforma Integral de Analítica Universitaria con BI, Big Data e IA Ética para la Predicción de Congestión de Trámites Administrativos</div>
+        <div class="hero-subtitle">Seguimiento de trámites, personas en cola, tiempos de espera y distribución por distrito</div>
     </div>
     """,
     unsafe_allow_html=True,
