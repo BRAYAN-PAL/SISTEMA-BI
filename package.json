@@ -2,10 +2,10 @@
   "name": "sis-project",
   "version": "2.0.0",
   "description": "SIS - Sistema de Información para análisis de congestión vehicular",
-  "main": "SIS/BACKEND/server.js",
+    "main": "BACKEND/server.js",
   "scripts": {
-    "start": "node SIS/BACKEND/server.js",
-    "dev": "node --watch SIS/BACKEND/server.js",
+    "start": "node BACKEND/server.js",
+    "dev": "node --watch BACKEND/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
