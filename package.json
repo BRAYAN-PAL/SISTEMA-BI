@@ -1,0 +1,26 @@
+{
+  "name": "sis-project",
+  "version": "2.0.0",
+  "description": "SIS - Sistema de Información para análisis de congestión vehicular",
+  "main": "SIS/BACKEND/server.js",
+  "scripts": {
+    "start": "node SIS/BACKEND/server.js",
+    "dev": "node --watch SIS/BACKEND/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sis",
+    "data-engine",
+    "machine-learning",
+    "etl"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mssql": "^12.7.0",
+    "pg": "^8.22.0"
+  }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proceso ETL</title>
+    <link rel="stylesheet" href="../css/etl.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="sidebar__brand">
+          <div class="brand__icon">DE</div>
+          <div>
+            <div class="brand__name">Data Engine</div>
+            <div class="brand__status">Instancia activa</div>
+          </div>
+        </div>
+        <div class="sidebar__progress">
+          <div class="progress__ring" id="progressRing">
+            <div class="progress__value" id="progressValue">0%</div>
+          </div>
+          <div class="progress__label" id="progressLabel">En espera</div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <section class="stepper">
+          <a class="step step--done" href="proceso.html">1</a>
+          <a class="step step--done" href="staging.html">2</a>
+          <a class="step step--active" href="etl.html">3</a>
+          <a class="step" href="data-warehouse.html">4</a>
+          <a class="step" href="capa-ia.html">5</a>
+          <a class="step" href="capa-semantica.html">6</a>
+        </section>
+        <div class="stepper__labels">
+          <span>Fuente de Datos</span>
+          <span>Staging Area</span>
+          <span class="label--active">Proceso ETL</span>
+          <span>Data Warehouse</span>
+          <span>Capa IA</span>
+          <span>Capa Semantica</span>
+        </div>
+
+        <section class="header">
+          <div>
+            <h1>Proceso ETL</h1>
+            <p>
+              Gestiona la orquestacion automatizada de datos, desde la limpieza
+              en Staging hasta la carga final en el Warehouse.
+            </p>
+          </div>
+          <div class="upload-progress">
+            <span>Progreso de carga:</span>
+            <div class="bar">
+              <div class="bar__fill" id="headerBar"></div>
+            </div>
+            <strong id="headerPercent">0%</strong>
+          </div>
+        </section>
+
+        <section class="content">
+          <div class="console">
+            <div class="console__bar">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+              <span class="console__title">etl_engine_v2.8.1 — Nexus Core-01</span>
+            </div>
+            <div class="console__body" id="consoleBody"></div>
+          </div>
+
+          <aside class="status">
+            <h3>Estado del pipeline</h3>
+            <div class="status__card">
+              <div class="status__label">Peso de archivos</div>
+              <div class="status__value" id="fileWeight">0 GB</div>
+              <div class="status__hint" id="fileWeightHint">Sin archivos cargados</div>
+            </div>
+            <div class="status__card">
+              <div class="status__label">Errores en carga</div>
+              <div class="status__value" id="errorRate">0</div>
+              <div class="status__hint" id="errorHint">Sin errores detectados</div>
+            </div>
+            <div class="status__card">
+              <div class="status__label">Topologia</div>
+              <ul class="status__list">
+                <li><span class="tag tag--ok"></span> Staging Purge</li>
+                <li><span class="tag tag--active"></span> Warehouse Load</li>
+                <li><span class="tag"></span> AI Enrichment</li>
+              </ul>
+            </div>
+
+            <div class="status__actions">
+              <a class="btn btn--ghost" href="staging.html">← Anterior</a>
+              <a class="btn btn--primary" href="data-warehouse.html">Siguiente →</a>
+              <button class="btn btn--ghost" id="loadDb" disabled>
+                Cargar a la base de datos
+              </button>
+              <button class="btn btn--ghost" id="clearData">Borrar datos</button>
+            </div>
+          </aside>
+        </section>
+      </main>
+    </div>
+
+    <script src="../js/etl.js"></script>
+  </body>
+</html>
+
+

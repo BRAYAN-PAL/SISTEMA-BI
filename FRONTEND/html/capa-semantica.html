@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capa Semántica - Data Engine</title>
+    <link rel="stylesheet" href="../css/capa-semantica.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="sidebar__brand">
+          <div class="brand__icon">DE</div>
+          <div>
+            <div class="brand__name">Data Engine</div>
+            <div class="brand__status">Instancia activa</div>
+          </div>
+        </div>
+        <div class="sidebar__nav">
+          <button class="nav__icon">⚙</button>
+          <span>Settings</span>
+        </div>
+      </aside>
+
+      <main class="main">
+        <section class="stepper">
+          <a class="step step--done" href="proceso.html">1</a>
+          <a class="step step--done" href="staging.html">2</a>
+          <a class="step step--done" href="etl.html">3</a>
+          <a class="step step--done" href="data-warehouse.html">4</a>
+          <a class="step step--done" href="capa-ia.html">5</a>
+          <a class="step step--active" href="capa-semantica.html">6</a>
+        </section>
+        <div class="stepper__labels">
+          <span>Fuente de Datos</span>
+          <span>Staging Area</span>
+          <span>Proceso ETL</span>
+          <span>Data Warehouse</span>
+          <span>Capa IA</span>
+          <span class="label--active">Capa Semántica</span>
+        </div>
+
+        <section class="header">
+          <div>
+            <h1>Capa Semántica & KPIs</h1>
+            <p>
+              Centralización de indicadores clave (KPIs) de congestión y
+              rendimiento de ventanillas calculados mediante SQL nativo.
+            </p>
+          </div>
+        </section>
+
+        <section class="metrics">
+          <article class="metric metric--blue">
+            <div class="metric__title">Tasa de Atención Eficiente</div>
+            <div class="metric__value" id="kpiAtencion">-</div>
+            <div class="metric__hint">Meta: >= 85.00%</div>
+          </article>
+          <article class="metric metric--orange">
+            <div class="metric__title">Tasa de Abandono / Congestión Alta</div>
+            <div class="metric__value" id="kpiCongestion">-</div>
+            <div class="metric__hint">Meta: <= 10.00%</div>
+          </article>
+          <article class="metric metric--purple">
+            <div class="metric__title">Tiempo Promedio de Espera</div>
+            <div class="metric__value" id="kpiTiempo">-</div>
+            <div class="metric__hint">Meta: <= 30.00 min</div>
+          </article>
+          <article class="metric metric--green">
+            <div class="metric__title">Última Actualización</div>
+            <div
+              class="metric__value"
+              id="kpiFecha"
+              style="font-size: 14px; align-self: center"
+            >
+              -
+            </div>
+            <div class="metric__hint">Matriz FactKPIs grabada</div>
+          </article>
+        </section>
+
+        <section class="grid">
+          <div class="card card--console">
+            <div class="card__header">
+              <span>Orquestador Semántico SQL</span>
+              <span class="card__badge">Nativo</span>
+            </div>
+            <div class="console" id="semanticConsole">
+              Esperando cálculo de indicadores...
+            </div>
+            <div class="card__actions">
+              <button class="btn btn--primary" id="btnCalcularKpis">
+                Calcular y Centralizar KPIs
+              </button>
+            </div>
+          </div>
+
+          <div class="card" style="min-height: 265px">
+            <div class="card__header">
+              <span>Rendimiento y Carga por Distrito</span>
+              <span class="card__badge">DimDistrito</span>
+            </div>
+            <div style="padding: 10px; overflow-y: auto; max-height: 200px">
+              <table
+                style="
+                  width: 100%;
+                  border-collapse: collapse;
+                  font-size: 13px;
+                  text-align: left;
+                "
+              >
+                <thead>
+                  <tr
+                    style="
+                      border-bottom: 2px solid var(--border);
+                      color: var(--muted);
+                    "
+                  >
+                    <th style="padding: 6px">Distrito</th>
+                    <th style="padding: 6px; text-align: center">Tramites Atendidos</th>
+                    <th style="padding: 6px; text-align: right">
+                      Indice de Productividad
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="tablaProductividad">
+                  <tr>
+                    <td
+                      colspan="3"
+                      style="
+                        text-align: center;
+                        color: var(--muted);
+                        padding: 20px;
+                        font-style: italic;
+                      "
+                    >
+                      Sin datos calculados aún
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="actions">
+          <a class="btn btn--ghost" href="capa-ia.html">← Anterior</a>
+          <button class="btn btn--ghost" id="openBi">
+            Visualizar Diagrama BI
+          </button>
+          <button
+            class="btn btn--ghost"
+            style="color: var(--green); border-color: var(--green)"
+            id="finishProject"
+          >
+            Finalizar Proyecto ✔
+          </button>
+        </section>
+      </main>
+    </div>
+
+    <script src="../js/capa-semantica.js"></script>
+  </body>
+</html>
